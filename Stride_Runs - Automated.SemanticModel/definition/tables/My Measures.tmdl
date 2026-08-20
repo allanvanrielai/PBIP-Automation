@@ -92,6 +92,60 @@ table 'My Measures'
 		formatString: 0
 		lineageTag: 094f81de-7d6b-41d9-8058-b06c80f197a4
 
+	measure HRR60 =
+			VAR CurrentLap = SELECTEDVALUE('TCX Data'[Lap Number])
+			VAR CurrentDate = SELECTEDVALUE('TCX Data'[Run Date])
+			VAR IsWorkLap = MOD(CurrentLap, 2) = 1
+			VAR RecoveryLap = CurrentLap + 1
+			VAR RecStartSec =
+			    CALCULATE(
+			        MIN('TCX Data'[SecondsIntoRun]), ALL('TCX Data'),
+			        'TCX Data'[Run Date] = CurrentDate, 'TCX Data'[Lap Number] = RecoveryLap
+			    )
+			VAR StartHR =
+			    CALCULATE(
+			        MAX('TCX Data'[TP HR]), ALL('TCX Data'),
+			        'TCX Data'[Run Date] = CurrentDate, 'TCX Data'[Lap Number] = RecoveryLap,
+			        'TCX Data'[SecondsIntoRun] = RecStartSec
+			    )
+			VAR HR60 =
+			    CALCULATE(
+			        MAX('TCX Data'[TP HR]), ALL('TCX Data'),
+			        'TCX Data'[Run Date] = CurrentDate, 'TCX Data'[Lap Number] = RecoveryLap,
+			        'TCX Data'[SecondsIntoRun] = RecStartSec + 60
+			    )
+			RETURN
+			    IF(NOT IsWorkLap, BLANK(), IF(ISBLANK(HR60), BLANK(), StartHR - HR60))
+		formatString: 0
+		displayFolder: Recovery HR
+		lineageTag: a41ca55b-0325-4294-99e3-3307db587573
+
+	measure 'Recovery Decay Rate' =
+			VAR CurrentLap = SELECTEDVALUE('TCX Data'[Lap Number])
+			VAR CurrentDate = SELECTEDVALUE('TCX Data'[Run Date])
+			VAR IsWorkLap = MOD(CurrentLap, 2) = 1
+			VAR RecoveryLap = CurrentLap + 1
+			VAR RecStartSec =
+			    CALCULATE(MIN('TCX Data'[SecondsIntoRun]), ALL('TCX Data'),
+			        'TCX Data'[Run Date] = CurrentDate, 'TCX Data'[Lap Number] = RecoveryLap)
+			VAR RecEndSec =
+			    CALCULATE(MAX('TCX Data'[SecondsIntoRun]), ALL('TCX Data'),
+			        'TCX Data'[Run Date] = CurrentDate, 'TCX Data'[Lap Number] = RecoveryLap)
+			VAR StartHR =
+			    CALCULATE(MAX('TCX Data'[TP HR]), ALL('TCX Data'),
+			        'TCX Data'[Run Date] = CurrentDate, 'TCX Data'[Lap Number] = RecoveryLap,
+			        'TCX Data'[SecondsIntoRun] = RecStartSec)
+			VAR EndHR =
+			    CALCULATE(MAX('TCX Data'[TP HR]), ALL('TCX Data'),
+			        'TCX Data'[Run Date] = CurrentDate, 'TCX Data'[Lap Number] = RecoveryLap,
+			        'TCX Data'[SecondsIntoRun] = RecEndSec)
+			VAR DurationSec = RecEndSec - RecStartSec
+			RETURN
+			    IF(NOT IsWorkLap || DurationSec <= 0, BLANK(), DIVIDE(StartHR - EndHR, DurationSec))
+		formatString: 0.00
+		displayFolder: Recovery HR
+		lineageTag: 278801a7-aa5e-40b8-b1c6-8bbe559b87af
+
 	column Column
 		formatString: 0
 		lineageTag: dbb38d2f-050e-4399-9819-947ef029bfcc
