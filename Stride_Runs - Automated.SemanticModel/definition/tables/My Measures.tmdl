@@ -40,16 +40,27 @@ table 'My Measures'
 		lineageTag: 645b5918-24d5-45dc-b674-76d75783b49e
 
 	measure 'Recovery BPM' =
-			
 			VAR CurrentLap = SELECTEDVALUE('TCX Data'[Lap Number])
+			VAR CurrentDate = SELECTEDVALUE('TCX Data'[Run Date])
 			VAR IsActiveLap = MOD(CurrentLap, 2) = 1
-			VAR LastHR = [Last HR This Lap]
-			VAR FirstHRNextInt = [First HR Next Interval Lap]
+			VAR ThisLapTable =
+			    CALCULATETABLE(
+			        'TCX Data', ALL('TCX Data'),
+			        'TCX Data'[Run Date] = CurrentDate, 'TCX Data'[Lap Number] = CurrentLap,
+			        NOT ISBLANK('TCX Data'[TP HR])
+			    )
+			VAR NextIntTable =
+			    CALCULATETABLE(
+			        'TCX Data', ALL('TCX Data'),
+			        'TCX Data'[Run Date] = CurrentDate, 'TCX Data'[Lap Number] = CurrentLap + 2,
+			        NOT ISBLANK('TCX Data'[TP HR])
+			    )
+			VAR LastHR = MAXX(TOPN(1, ThisLapTable, 'TCX Data'[TP Time], DESC), 'TCX Data'[TP HR])
+			VAR FirstHRNextInt = MAXX(TOPN(1, NextIntTable, 'TCX Data'[TP Time], ASC), 'TCX Data'[TP HR])
 			RETURN
 			    IF(
-			        NOT IsActiveLap,
-			        BLANK(),
-			        IF(ISBLANK(FirstHRNextInt), BLANK(), LastHR - FirstHRNextInt)
+			        NOT IsActiveLap, BLANK(),
+			        IF(ISBLANK(LastHR) || ISBLANK(FirstHRNextInt), BLANK(), LastHR - FirstHRNextInt)
 			    )
 		formatString: 0
 		lineageTag: 97c067a1-5b88-4213-9c5a-4dab7fda974f
