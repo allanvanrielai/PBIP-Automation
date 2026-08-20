@@ -97,25 +97,25 @@ table 'My Measures'
 			VAR CurrentDate = SELECTEDVALUE('TCX Data'[Run Date])
 			VAR IsWorkLap = MOD(CurrentLap, 2) = 1
 			VAR RecoveryLap = CurrentLap + 1
-			VAR RecStartSec =
-			    CALCULATE(
-			        MIN('TCX Data'[SecondsIntoRun]), ALL('TCX Data'),
-			        'TCX Data'[Run Date] = CurrentDate, 'TCX Data'[Lap Number] = RecoveryLap
+			VAR RecTable =
+			    CALCULATETABLE(
+			        'TCX Data', ALL('TCX Data'),
+			        'TCX Data'[Run Date] = CurrentDate, 'TCX Data'[Lap Number] = RecoveryLap,
+			        NOT ISBLANK('TCX Data'[TP HR])
 			    )
+			VAR RecStartSec = MINX(RecTable, 'TCX Data'[SecondsIntoRun])
 			VAR StartHR =
-			    CALCULATE(
-			        MAX('TCX Data'[TP HR]), ALL('TCX Data'),
-			        'TCX Data'[Run Date] = CurrentDate, 'TCX Data'[Lap Number] = RecoveryLap,
-			        'TCX Data'[SecondsIntoRun] = RecStartSec
-			    )
+			    MAXX(TOPN(1, FILTER(RecTable, 'TCX Data'[SecondsIntoRun] = RecStartSec), 'TCX Data'[TP Time], ASC), 'TCX Data'[TP HR])
 			VAR HR60 =
-			    CALCULATE(
-			        MAX('TCX Data'[TP HR]), ALL('TCX Data'),
-			        'TCX Data'[Run Date] = CurrentDate, 'TCX Data'[Lap Number] = RecoveryLap,
-			        'TCX Data'[SecondsIntoRun] = RecStartSec + 60
+			    MAXX(
+			        TOPN(1, FILTER(RecTable, 'TCX Data'[SecondsIntoRun] >= RecStartSec + 60), 'TCX Data'[SecondsIntoRun], ASC),
+			        'TCX Data'[TP HR]
 			    )
 			RETURN
-			    IF(NOT IsWorkLap, BLANK(), IF(ISBLANK(HR60), BLANK(), StartHR - HR60))
+			    IF(
+			        NOT IsWorkLap, BLANK(),
+			        IF(ISBLANK(StartHR) || ISBLANK(HR60), BLANK(), StartHR - HR60)
+			    )
 		formatString: 0
 		displayFolder: Recovery HR
 		lineageTag: a41ca55b-0325-4294-99e3-3307db587573
@@ -125,23 +125,24 @@ table 'My Measures'
 			VAR CurrentDate = SELECTEDVALUE('TCX Data'[Run Date])
 			VAR IsWorkLap = MOD(CurrentLap, 2) = 1
 			VAR RecoveryLap = CurrentLap + 1
-			VAR RecStartSec =
-			    CALCULATE(MIN('TCX Data'[SecondsIntoRun]), ALL('TCX Data'),
-			        'TCX Data'[Run Date] = CurrentDate, 'TCX Data'[Lap Number] = RecoveryLap)
-			VAR RecEndSec =
-			    CALCULATE(MAX('TCX Data'[SecondsIntoRun]), ALL('TCX Data'),
-			        'TCX Data'[Run Date] = CurrentDate, 'TCX Data'[Lap Number] = RecoveryLap)
-			VAR StartHR =
-			    CALCULATE(MAX('TCX Data'[TP HR]), ALL('TCX Data'),
+			VAR RecTable =
+			    CALCULATETABLE(
+			        'TCX Data', ALL('TCX Data'),
 			        'TCX Data'[Run Date] = CurrentDate, 'TCX Data'[Lap Number] = RecoveryLap,
-			        'TCX Data'[SecondsIntoRun] = RecStartSec)
-			VAR EndHR =
-			    CALCULATE(MAX('TCX Data'[TP HR]), ALL('TCX Data'),
-			        'TCX Data'[Run Date] = CurrentDate, 'TCX Data'[Lap Number] = RecoveryLap,
-			        'TCX Data'[SecondsIntoRun] = RecEndSec)
-			VAR DurationSec = RecEndSec - RecStartSec
+			        NOT ISBLANK('TCX Data'[TP HR])
+			    )
+			VAR StartRow = TOPN(1, RecTable, 'TCX Data'[SecondsIntoRun], ASC)
+			VAR EndRow = TOPN(1, RecTable, 'TCX Data'[SecondsIntoRun], DESC)
+			VAR StartHR = MAXX(StartRow, 'TCX Data'[TP HR])
+			VAR EndHR = MAXX(EndRow, 'TCX Data'[TP HR])
+			VAR StartSec = MAXX(StartRow, 'TCX Data'[SecondsIntoRun])
+			VAR EndSec = MAXX(EndRow, 'TCX Data'[SecondsIntoRun])
+			VAR DurationSec = EndSec - StartSec
 			RETURN
-			    IF(NOT IsWorkLap || DurationSec <= 0, BLANK(), DIVIDE(StartHR - EndHR, DurationSec))
+			    IF(
+			        NOT IsWorkLap || ISBLANK(StartHR) || ISBLANK(EndHR) || DurationSec <= 0, BLANK(),
+			        DIVIDE(StartHR - EndHR, DurationSec)
+			    )
 		formatString: 0.00
 		displayFolder: Recovery HR
 		lineageTag: 278801a7-aa5e-40b8-b1c6-8bbe559b87af
