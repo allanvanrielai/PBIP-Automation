@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "21fbc7fb73b63f1b7a7e",
+  "displayName": "FILE CHECKS",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}

@@ -1,0 +1,68 @@
+table MissingDateReport
+	lineageTag: c7114e89-ac10-40f5-b915-108ef39a496c
+
+	column 'Unique Run Date'
+		formatString: yyyy/mm/dd
+		lineageTag: 36783ca5-022d-4386-a8cb-130c97e385d4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Unique Run Date]
+
+		variation Variation
+			isDefault
+			relationship: 44011a3b-ed11-416a-bae4-ac98dbc90e9b
+			defaultHierarchy: LocalDateTable_38a07176-93da-4b77-bd7b-9cb1185834c0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column 'Source Message'
+		lineageTag: 2eef821b-ef6c-4732-90bb-246c661c1690
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Source Message]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition MissingDateReport = calculated
+		mode: import
+		source = ```
+				
+				VAR MasterDates = 
+				    DISTINCT(
+				        UNION(
+				            SELECTCOLUMNS('TCX Data', "BaseDate", DATEVALUE('TCX Data'[Run Date])),
+				            -- Force the CSV column to be a Date even if it's currently Text
+				            SELECTCOLUMNS('Splits CSV Input', "BaseDate", DATEVALUE('Splits CSV Input'[Run Date]))
+				        )
+				    )
+				RETURN
+				    SELECTCOLUMNS(
+				        MasterDates,
+				        "Unique Run Date", [BaseDate],
+				        "Source Message", 
+				            VAR CurrentDate = [BaseDate]
+				            
+				            -- We use TRIM to remove hidden spaces if it's text
+				            VAR InTCX = 
+				                COUNTROWS(
+				                    FILTER('TCX Data', DATEVALUE('TCX Data'[Run Date]) = CurrentDate)
+				                ) > 0
+				                
+				            VAR InCSV = 
+				                COUNTROWS(
+				                    FILTER('Splits CSV Input', DATEVALUE('Splits CSV Input'[Run Date]) = CurrentDate)
+				                ) > 0
+				                
+				            RETURN
+				                SWITCH( TRUE(),
+				                    InTCX && NOT(InCSV), "Missing in Splits CSV",
+				                    InCSV && NOT(InTCX), "Missing in TCX Data",
+				                    "Available in Both"
+				                )
+				    )
+				```
+
+	annotation PBI_Id = 55d80f56fad34f408ae4535c5c898638
+

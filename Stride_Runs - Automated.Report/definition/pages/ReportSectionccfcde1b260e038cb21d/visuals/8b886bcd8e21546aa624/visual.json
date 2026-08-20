@@ -1,0 +1,54 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "8b886bcd8e21546aa624",
+  "position": {
+    "x": 372.61455525606465,
+    "y": 98.3288409703504,
+    "z": 8000,
+    "height": 70.7277628032345,
+    "width": 806.46900269541777,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Pop ups:"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "https://www.google.com/search?q=add+dazzle+to+power+bi&rlz=1C1GCEA_enZA1130ZA1130&oq=add+dazzle+to+power+bi&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigAdIBCTU0NjVqMGoxNagCCLACAfEFSQF4hA9g04E&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:fbc72863,vid:JZ0FwDr9SXU,st:0"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

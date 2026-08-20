@@ -1,0 +1,126 @@
+table Dates
+	isHidden
+	lineageTag: 2d0ad621-fc8a-4169-820f-6d635362ef2e
+	dataCategory: Time
+
+	column Date
+		isHidden
+		isKey
+		formatString: Short Date
+		lineageTag: ef8f3cdc-d0eb-45b5-a3c2-51e2f0b2c919
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		changedProperty = DataType
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column MonthNum = MONTH(Dates[Date])
+		isHidden
+		formatString: 0
+		lineageTag: d92bf55b-01e5-4a45-8474-bde1d6eb50ad
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthName = FORMAT(Dates[Date], "MMMM")
+		isHidden
+		lineageTag: 49fdaac1-4452-4e47-8755-ae25e908d072
+		summarizeBy: none
+		sortByColumn: MonthNum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year = FORMAT(Dates[Date], "yyyy")
+		isHidden
+		lineageTag: 376da58b-3ed4-48a2-a3f5-3644f2ffa740
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNo = MONTH((Dates[Date]))
+		isHidden
+		formatString: 0
+		lineageTag: 4bc8b034-12a6-4c4b-b273-c539dd8c0cee
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Week' =
+			
+			
+			VAR DaySun2Mon = WEEKDAY(Dates[Date])
+			
+			VAR FirstDayDate  = Date(YEAR(Dates[Date]), MONTH(Dates[Date]), 1)
+			
+			// VAR TheDay = IF(WEEKDAY(Dates[Date]) = 1,7,WEEKDAY(Dates[Date]) - 1)
+			VAR TheDay = IF(WEEKDAY(FirstDayDate) = 1,7,WEEKDAY(FirstDayDate) - 1)
+			
+			VAR WeekEndsOnDay = (7 - TheDay) + 1
+			
+			VAR DayOfMonth = DAY(Dates[Date])
+			
+			//=IF(F2 < (SUM(E2 + 1)),1, IF(AND(F2>E2,F2 < SUM(E2 + 8)),2,IF(AND(F2 > SUM(E2 + 7), F2 < SUM(E2 + 15)),3,IF(AND(F2 > SUM(E2 + 14), F2 < SUM(E2 + 22)),4,IF(AND(F2 > SUM(E2 + 21), F2 < SUM(E2 + 29)),5,6)))))
+			VAR MonthWeek =
+			IF(DayOfMonth < (WeekEndsOnDay + 1),1, IF(AND(DayOfMonth > WeekEndsOnDay,DayOfMonth < (WeekEndsOnDay + 8)),2,IF(AND(DayOfMonth > (WeekEndsOnDay + 7), DayOfMonth < (WeekEndsOnDay + 15)),3,IF(AND(DayOfMonth > (WeekEndsOnDay + 14), DayOfMonth < (WeekEndsOnDay + 22)),4,IF(AND(DayOfMonth > (WeekEndsOnDay + 21), DayOfMonth < (WeekEndsOnDay + 29)),5,6)))))
+			
+			RETURN
+			    MonthWeek
+		isHidden
+		formatString: 0
+		lineageTag: b61ce9d4-d008-4e32-b034-d146e379e146
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column MyDaySUn2Mon = WEEKDAY(Dates[Date])
+		isHidden
+		formatString: 0
+		lineageTag: d377cb55-ffad-4bb8-9ba0-a1886d97bb4f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column MyFirstDayDate = Date(YEAR(Dates[Date]), MONTH(Dates[Date]), 1)
+		isHidden
+		formatString: General Date
+		lineageTag: 19ad7ddc-9329-4139-a299-df7675a5d3f6
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column MyTheDay = IF(WEEKDAY(Date(YEAR(Dates[Date]), MONTH(Dates[Date]), 1)) = 1,7,WEEKDAY(Date(YEAR(Dates[Date]), MONTH(Dates[Date]), 1)) - 1)
+		isHidden
+		formatString: 0
+		lineageTag: 481120df-f77f-47bb-b4d8-947b56a1f543
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column MyWeekEndsOnDay = (7 - IF(WEEKDAY(Dates[Date]) = 1,7,WEEKDAY(Dates[Date]) - 1)) + 1
+		isHidden
+		formatString: 0
+		lineageTag: 5b10d838-c8c0-4516-a695-3051d14ff9f5
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column MyDayOfMonth = DAY(Dates[Date])
+		isHidden
+		formatString: 0
+		lineageTag: 50c883bb-3ae4-499b-b57a-144f22a54fa6
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dates-de4d97c6-8bb0-43a9-a002-9e5fdfb50a62 = calculated
+		mode: import
+		source = CALENDAR(MIN('Stride Runs'[Date]), DATE(2027,12,31))
+
+	annotation PBI_Id = 77c6e180febe4e54a3a4fa4a60f826e2
+

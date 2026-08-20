@@ -1,0 +1,259 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "ef91eeb90bc8bb5bf5b6",
+  "position": {
+    "x": 164.92610837438423,
+    "y": 78.916256157635473,
+    "z": 2000,
+    "height": 422.95566502463055,
+    "width": 207.48768472906403,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Dark (Background)"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "#1D1E29"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Dark Gray (Headers)"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "#666666",
+                    "textStyle": {
+                      "fontSize": "13.3333px"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Background (Visuals)"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "#323447",
+                    "textStyle": {
+                      "fontSize": "13.3333px"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Dark Green",
+                    "textStyle": {
+                      "fontSize": "13.3333px"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "#287E8F",
+                    "textStyle": {
+                      "fontSize": "13.3333px"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Lighter Green",
+                    "textStyle": {
+                      "fontSize": "13.3333px"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "#15CAB6",
+                    "textStyle": {
+                      "fontSize": "13.3333px"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "RED"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "FF0000"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "ORANGE"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "FF7400"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "BLUE"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "#145CD0"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Green"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "3CB043",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "16px",
+                      "color": "#3f3844"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

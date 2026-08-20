@@ -1,0 +1,109 @@
+table 'My Measures'
+	lineageTag: 3403f838-201a-40a9-9a8a-4a1a2099a835
+
+	measure 'Lap Average HR' = AVERAGE('TCX Data'[TP HR])
+		lineageTag: c20cec9a-1ffd-48d9-8d85-1395ee6f9319
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Lap Max HR (Calc)' = MAX('TCX Data'[TP HR])
+		formatString: 0
+		lineageTag: 053e823d-c6c3-4b7a-beca-e555de60f8b5
+
+	measure 'Last HR This Lap' =
+			
+			MAXX(
+			    TOPN(1, 'TCX Data', 'TCX Data'[TP Time], DESC),
+			    'TCX Data'[TP HR]
+			)
+		formatString: 0
+		lineageTag: 91008598-05d4-4829-a5d1-00e6c16fec08
+
+	measure 'First HR Next Lap' =
+			
+			VAR CurrentLap = SELECTEDVALUE('TCX Data'[Lap Number])
+			VAR CurrentDate = SELECTEDVALUE('TCX Data'[Run Date])
+			VAR NextLapFirstTime =
+			    CALCULATE(
+			        MIN('TCX Data'[TP Time]),
+			        ALL('TCX Data'),
+			        'TCX Data'[Run Date] = CurrentDate,
+			        'TCX Data'[Lap Number] = CurrentLap + 1
+			    )
+			RETURN
+			    CALCULATE(
+			        MAX('TCX Data'[TP HR]),
+			        ALL('TCX Data'),
+			        'TCX Data'[TP Time] = NextLapFirstTime
+			    )
+		formatString: 0
+		lineageTag: 645b5918-24d5-45dc-b674-76d75783b49e
+
+	measure 'Recovery BPM' =
+			
+			VAR CurrentLap = SELECTEDVALUE('TCX Data'[Lap Number])
+			VAR IsActiveLap = MOD(CurrentLap, 2) = 1
+			VAR LastHR = [Last HR This Lap]
+			VAR FirstHRNextInt = [First HR Next Interval Lap]
+			RETURN
+			    IF(
+			        NOT IsActiveLap,
+			        BLANK(),
+			        IF(ISBLANK(FirstHRNextInt), BLANK(), LastHR - FirstHRNextInt)
+			    )
+		formatString: 0
+		lineageTag: 97c067a1-5b88-4213-9c5a-4dab7fda974f
+
+	measure 'Last HR Next Lap' =
+			
+			VAR CurrentLap = SELECTEDVALUE('TCX Data'[Lap Number])
+			VAR CurrentDate = SELECTEDVALUE('TCX Data'[Run Date])
+			VAR NextLapTable =
+			    CALCULATETABLE(
+			        'TCX Data',
+			        ALL('TCX Data'),
+			        'TCX Data'[Run Date] = CurrentDate,
+			        'TCX Data'[Lap Number] = CurrentLap + 1
+			    )
+			RETURN
+			    MAXX(
+			        TOPN(1, NextLapTable, 'TCX Data'[TP Time], DESC),
+			        'TCX Data'[TP HR]
+			    )
+		formatString: 0
+		lineageTag: 1b00078b-5e27-496a-88cd-bab082b1e7fe
+
+	measure 'First HR Next Interval Lap' =
+			
+			VAR CurrentLap = SELECTEDVALUE('TCX Data'[Lap Number])
+			VAR CurrentDate = SELECTEDVALUE('TCX Data'[Run Date])
+			VAR NextIntTable =
+			    CALCULATETABLE(
+			        'TCX Data',
+			        ALL('TCX Data'),
+			        'TCX Data'[Run Date] = CurrentDate,
+			        'TCX Data'[Lap Number] = CurrentLap + 2
+			    )
+			RETURN
+			    MINX(
+			        TOPN(1, NextIntTable, 'TCX Data'[TP Time], ASC),
+			        'TCX Data'[TP HR]
+			    )
+		formatString: 0
+		lineageTag: 094f81de-7d6b-41d9-8058-b06c80f197a4
+
+	column Column
+		formatString: 0
+		lineageTag: dbb38d2f-050e-4399-9819-947ef029bfcc
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'My Measures' = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = b5a523443e5b469fb3b6350c75ea35bc
+

@@ -1,0 +1,125 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 394,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 681.20001525878911,
+            "y": 467.125
+          },
+          "nodeIndex": "Dates",
+          "nodeLineageTag": "2d0ad621-fc8a-4169-820f-6d635362ef2e",
+          "size": {
+            "height": 235,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 179,
+            "y": 407.0625
+          },
+          "nodeIndex": "TCX Data",
+          "nodeLineageTag": "96ff509d-124c-47d4-b723-58baefce9596",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 1336,
+            "y": 322.03125
+          },
+          "nodeIndex": "LastArrivalTable",
+          "nodeLineageTag": "169ed2ac-3b1f-4538-bdb8-c2b7042f37e8",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 990,
+            "y": 0
+          },
+          "nodeIndex": "Splits CSV Input",
+          "nodeLineageTag": "4a880bd4-9fd0-45e8-b405-f7579bf38512",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1357,
+            "y": 533.03125
+          },
+          "nodeIndex": "MissingDateReport",
+          "nodeLineageTag": "c7114e89-ac10-40f5-b915-108ef39a496c",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 466,
+            "y": 750.03125
+          },
+          "nodeIndex": "Splits - Daily",
+          "nodeLineageTag": "0e107bc3-153f-40e2-9dcc-9a0ef3626925",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1328.5471801757813,
+            "y": 0
+          },
+          "nodeIndex": "Stride Runs",
+          "nodeLineageTag": "ddeb975f-1eb8-4541-a387-c5c6a10a333f",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 1462,
+            "y": 425.015625
+          },
+          "nodeIndex": "My Measures",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

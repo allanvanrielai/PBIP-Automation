@@ -1,0 +1,128 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY21SU11",
+      "reportVersionAtImport": {
+        "visual": "1.8.64",
+        "report": "2.0.64",
+        "page": "1.3.64"
+      },
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Metricalist_-_Wireframe_Theme30251168119710115.json",
+      "reportVersionAtImport": {
+        "visual": "1.8.64",
+        "report": "2.0.64",
+        "page": "1.3.64"
+      },
+      "type": "RegisteredResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "visible": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "publicCustomVisuals": [
+    "simpleImageEBC4593F96F1425FB3D84C5BF02B5075",
+    "ImageGrid_FC5183B9_926C_45E0_B5F7_0CE9EAF1DA9B",
+    "ImageCarouselByMAQSoftware1448688110701",
+    "charticulatorVisualCommunity_EDITOR"
+  ],
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY21SU11",
+          "path": "BaseThemes/CY21SU11.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Metricalist_-_Wireframe_Theme30251168119710115.json",
+          "path": "Metricalist_-_Wireframe_Theme30251168119710115.json",
+          "type": "CustomTheme"
+        }
+      ]
+    },
+    {
+      "name": "itemDetails7AF21ECC19D54ECB9D8A4C3EFE7471F1",
+      "type": "CustomVisual",
+      "items": [
+        {
+          "name": "itemDetails7AF21ECC19D54ECB9D8A4C3EFE7471F1.pbiviz.json",
+          "path": "itemDetails7AF21ECC19D54ECB9D8A4C3EFE7471F1.pbiviz.json",
+          "type": "CustomVisualMetadata"
+        }
+      ]
+    },
+    {
+      "name": "simpleImageEBC4593F96F1425FB3D84C5BF02B5075",
+      "type": "CustomVisual",
+      "items": [
+        {
+          "name": "simpleImageEBC4593F96F1425FB3D84C5BF02B5075.pbiviz.json",
+          "path": "simpleImageEBC4593F96F1425FB3D84C5BF02B5075.pbiviz.json",
+          "type": "CustomVisualMetadata"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "useCrossReportDrillthrough": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "queryLimitOption": "None",
+    "customMemoryLimit": "1048576",
+    "customTimeoutLimit": "225"
+  },
+  "slowDataSourceSettings": {
+    "isCrossHighlightingDisabled": false,
+    "isSlicerSelectionsButtonEnabled": false,
+    "isFilterSelectionsButtonEnabled": false,
+    "isFieldWellButtonEnabled": false,
+    "isApplyAllButtonEnabled": false
+  }
+}

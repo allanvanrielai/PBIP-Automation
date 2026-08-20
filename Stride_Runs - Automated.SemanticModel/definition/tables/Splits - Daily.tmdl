@@ -1,0 +1,1618 @@
+table 'Splits - Daily'
+	lineageTag: 0e107bc3-153f-40e2-9dcc-9a0ef3626925
+
+	column 'Run Date'
+		dataType: dateTime
+		formatString: yyyy/mm/dd
+		lineageTag: f02cbcf5-de57-48e5-b368-524357bbb290
+		summarizeBy: none
+		sourceColumn: Run Date
+
+		variation Variation
+			isDefault
+			relationship: 0ed6d870-abee-4f68-b75c-68a51a9c64f0
+			defaultHierarchy: LocalDateTable_faf83ed2-4610-4658-8034-31fd90bbe4e5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column 'Lap 1 - Interval'
+		dataType: string
+		lineageTag: cf7fca84-8851-4a21-8ef7-ef02ae808d4f
+		summarizeBy: none
+		sourceColumn: Lap 1 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 1 - Step Type'
+		dataType: string
+		lineageTag: 4e0c201b-808c-4e8d-8224-d6c19554bc40
+		summarizeBy: none
+		sourceColumn: Lap 1 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 1 - Time'
+		dataType: string
+		lineageTag: e6dc8204-8671-415c-b089-a704a8a8951c
+		summarizeBy: none
+		sourceColumn: Lap 1 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 1 - Distance'
+		dataType: string
+		lineageTag: 20de740c-29d6-4a2e-93a4-4342b0d871d1
+		summarizeBy: none
+		sourceColumn: Lap 1 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 1 - Avg Pace'
+		dataType: string
+		lineageTag: 7877e439-b814-48f1-9338-6f2d79619ba1
+		summarizeBy: none
+		sourceColumn: Lap 1 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 1 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 40d18778-add8-4e68-82ff-1948247c4a95
+		summarizeBy: sum
+		sourceColumn: Lap 1 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 1 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: d51819ca-08ab-4f02-82c9-1b61795688d8
+		summarizeBy: sum
+		sourceColumn: Lap 1 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 2 - Interval'
+		dataType: string
+		lineageTag: a79b331a-8ec2-4993-9480-d1ec2b192e31
+		summarizeBy: none
+		sourceColumn: Lap 2 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 2 - Step Type'
+		dataType: string
+		lineageTag: 178e6a86-55b9-4cb2-85be-22e9d970d95e
+		summarizeBy: none
+		sourceColumn: Lap 2 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 2 - Time'
+		dataType: string
+		lineageTag: 42a0da86-f774-487a-bd44-7ee4b72b644f
+		summarizeBy: none
+		sourceColumn: Lap 2 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 2 - Distance'
+		dataType: string
+		lineageTag: cae4afca-3d68-4ce6-9a9e-6eb189695146
+		summarizeBy: none
+		sourceColumn: Lap 2 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 2 - Avg Pace'
+		dataType: string
+		lineageTag: 4bb71e69-f6df-4815-a191-0cec8ca04435
+		summarizeBy: none
+		sourceColumn: Lap 2 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 2 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: ca30720e-5e6a-4130-8751-baa88a1ad566
+		summarizeBy: sum
+		sourceColumn: Lap 2 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 2 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 859469ea-c9f7-47ce-991b-a555d71e00ae
+		summarizeBy: sum
+		sourceColumn: Lap 2 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 3 - Interval'
+		dataType: string
+		lineageTag: a9bac079-f311-4783-9957-547b43c7fc51
+		summarizeBy: none
+		sourceColumn: Lap 3 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 3 - Step Type'
+		dataType: string
+		lineageTag: d43364d4-4748-45b6-9449-c8e42ffb05fc
+		summarizeBy: none
+		sourceColumn: Lap 3 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 3 - Time'
+		dataType: string
+		lineageTag: 0ea1f278-753d-404d-97f7-dc05487b96d7
+		summarizeBy: none
+		sourceColumn: Lap 3 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 3 - Distance'
+		dataType: string
+		lineageTag: 296b5c0d-efb4-4f6b-ac0f-d82b54a7f603
+		summarizeBy: none
+		sourceColumn: Lap 3 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 3 - Avg Pace'
+		dataType: string
+		lineageTag: 7f6d1b19-bcb4-40a1-abb5-bf7e15e94252
+		summarizeBy: none
+		sourceColumn: Lap 3 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 3 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 18a288a4-37af-42bb-a42c-ac8939e58499
+		summarizeBy: sum
+		sourceColumn: Lap 3 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 3 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: f082f11b-e969-43b5-8f0d-c5cd99ef8355
+		summarizeBy: sum
+		sourceColumn: Lap 3 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 4 - Interval'
+		dataType: string
+		lineageTag: fecdf603-1496-4efb-8b7f-d9192b861052
+		summarizeBy: none
+		sourceColumn: Lap 4 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 4 - Step Type'
+		dataType: string
+		lineageTag: 628afbb9-90d0-4703-9776-9638b2b7f518
+		summarizeBy: none
+		sourceColumn: Lap 4 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 4 - Time'
+		dataType: string
+		lineageTag: 45169c59-5532-45df-939f-13b87258f4df
+		summarizeBy: none
+		sourceColumn: Lap 4 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 4 - Distance'
+		dataType: string
+		lineageTag: 5bfad9f6-16c7-4e12-84a6-7e2be24149ee
+		summarizeBy: none
+		sourceColumn: Lap 4 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 4 - Avg Pace'
+		dataType: string
+		lineageTag: bf3fb709-a481-40c8-bf97-3e09986a1c75
+		summarizeBy: none
+		sourceColumn: Lap 4 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 4 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3e27d203-ff72-4c9e-be1f-a57b00676fa1
+		summarizeBy: sum
+		sourceColumn: Lap 4 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 4 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: fac06aa6-b270-404b-904a-524858207cf8
+		summarizeBy: sum
+		sourceColumn: Lap 4 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 5 - Interval'
+		dataType: string
+		lineageTag: e24850f4-657c-4c21-8030-cbac612ac4b9
+		summarizeBy: none
+		sourceColumn: Lap 5 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 5 - Step Type'
+		dataType: string
+		lineageTag: 75109af8-0c4c-4074-9633-3ab9cfe05d29
+		summarizeBy: none
+		sourceColumn: Lap 5 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 5 - Time'
+		dataType: string
+		lineageTag: 0e775294-6f2b-414d-a520-4c0692b4d089
+		summarizeBy: none
+		sourceColumn: Lap 5 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 5 - Distance'
+		dataType: string
+		lineageTag: 66fe903c-b257-4582-94bf-c6509d3afc7f
+		summarizeBy: none
+		sourceColumn: Lap 5 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 5 - Avg Pace'
+		dataType: string
+		lineageTag: 371d5e5a-a956-4449-afbf-bcab5e88821e
+		summarizeBy: none
+		sourceColumn: Lap 5 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 5 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 98973d2d-b31e-40a8-b3c2-0513f46ecf4f
+		summarizeBy: sum
+		sourceColumn: Lap 5 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 5 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: f307abf1-5a66-4d55-9819-1fdf727ce51e
+		summarizeBy: sum
+		sourceColumn: Lap 5 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 6 - Interval'
+		dataType: string
+		lineageTag: d2be2279-50f1-48f8-8a53-20319d14524d
+		summarizeBy: none
+		sourceColumn: Lap 6 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 6 - Step Type'
+		dataType: string
+		lineageTag: 23f6ecdf-067e-445f-8fda-1b110b57407a
+		summarizeBy: none
+		sourceColumn: Lap 6 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 6 - Time'
+		dataType: string
+		lineageTag: c2282709-01fc-4215-8f7a-ee36eb2fd847
+		summarizeBy: none
+		sourceColumn: Lap 6 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 6 - Distance'
+		dataType: string
+		lineageTag: d037e563-7d99-43d8-9a0d-95bd83dd6af0
+		summarizeBy: none
+		sourceColumn: Lap 6 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 6 - Avg Pace'
+		dataType: string
+		lineageTag: 6a456d61-11bf-4478-83db-d8d1a9f45adf
+		summarizeBy: none
+		sourceColumn: Lap 6 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 6 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: a8c77eb9-7759-4c05-b495-69b29a1e21d8
+		summarizeBy: sum
+		sourceColumn: Lap 6 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 6 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1798d114-e54b-4b75-a88a-1e66b2f60334
+		summarizeBy: sum
+		sourceColumn: Lap 6 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 7 - Interval'
+		dataType: string
+		lineageTag: 55dfe03c-b316-4e95-837b-3f03234759b7
+		summarizeBy: none
+		sourceColumn: Lap 7 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 7 - Step Type'
+		dataType: string
+		lineageTag: c459247e-9a0d-4509-8a85-9d759e3a6e87
+		summarizeBy: none
+		sourceColumn: Lap 7 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 7 - Time'
+		dataType: string
+		lineageTag: cef8c757-48f5-4dc5-b3c1-c62f08bab835
+		summarizeBy: none
+		sourceColumn: Lap 7 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 7 - Distance'
+		dataType: string
+		lineageTag: 6083c1e4-b8cc-4469-8203-30a61d9a4229
+		summarizeBy: none
+		sourceColumn: Lap 7 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 7 - Avg Pace'
+		dataType: string
+		lineageTag: 322ee121-b4b9-4bc6-9138-9bc4c878cd04
+		summarizeBy: none
+		sourceColumn: Lap 7 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 7 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 41613662-8dc5-4977-9afa-25dedfa40518
+		summarizeBy: sum
+		sourceColumn: Lap 7 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 7 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: c69f7688-e6b1-4841-9402-447de07e8b4f
+		summarizeBy: sum
+		sourceColumn: Lap 7 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 8 - Interval'
+		dataType: string
+		lineageTag: 3b6db3d8-acba-4e20-95a4-c1d5a0dda7f7
+		summarizeBy: none
+		sourceColumn: Lap 8 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 8 - Step Type'
+		dataType: string
+		lineageTag: 2ae31733-a4cc-4da8-a4f5-f5742089fb2c
+		summarizeBy: none
+		sourceColumn: Lap 8 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 8 - Time'
+		dataType: string
+		lineageTag: 8ad8b78b-c7f5-4ec9-bcf8-84ac797512a8
+		summarizeBy: none
+		sourceColumn: Lap 8 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 8 - Distance'
+		dataType: string
+		lineageTag: 4c5c4509-5c82-4232-a88a-e8858bb23866
+		summarizeBy: none
+		sourceColumn: Lap 8 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 8 - Avg Pace'
+		dataType: string
+		lineageTag: bcf70f75-49a5-4deb-8c0c-3704ed518dc8
+		summarizeBy: none
+		sourceColumn: Lap 8 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 8 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 226121ec-aff3-43b3-a49c-2122fbe8686d
+		summarizeBy: sum
+		sourceColumn: Lap 8 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 8 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1ef73613-0bc8-4a32-8c5f-eae7fd4d870a
+		summarizeBy: sum
+		sourceColumn: Lap 8 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 9 - Interval'
+		dataType: string
+		lineageTag: c27c8f27-150b-4b2d-bbe7-c51b1b41067b
+		summarizeBy: none
+		sourceColumn: Lap 9 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 9 - Step Type'
+		dataType: string
+		lineageTag: 758055a8-450f-4db0-b2e1-b0ca8fd3c8ae
+		summarizeBy: none
+		sourceColumn: Lap 9 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 9 - Time'
+		dataType: string
+		lineageTag: 0ba32219-6159-43d0-a365-2b2dbb659613
+		summarizeBy: none
+		sourceColumn: Lap 9 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 9 - Distance'
+		dataType: string
+		lineageTag: bfcc3a20-3606-4d39-b64d-ac6e4220a914
+		summarizeBy: none
+		sourceColumn: Lap 9 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 9 - Avg Pace'
+		dataType: string
+		lineageTag: 988e3802-edc7-482d-8d35-3fdb84503b65
+		summarizeBy: none
+		sourceColumn: Lap 9 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 9 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7bcf895e-f88e-4ff3-aa27-025cb2309aaf
+		summarizeBy: sum
+		sourceColumn: Lap 9 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 9 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0c220d70-73d5-4281-9cf7-639fb80108c2
+		summarizeBy: sum
+		sourceColumn: Lap 9 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 10 - Interval'
+		dataType: string
+		lineageTag: 54dcd541-0431-4736-9e5c-e4ff77a134ce
+		summarizeBy: none
+		sourceColumn: Lap 10 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 10 - Step Type'
+		dataType: string
+		lineageTag: a1521b24-02bd-4285-9b86-ac2c78614118
+		summarizeBy: none
+		sourceColumn: Lap 10 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 10 - Time'
+		dataType: string
+		lineageTag: ea48281e-4dec-4932-a342-561534539024
+		summarizeBy: none
+		sourceColumn: Lap 10 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 10 - Distance'
+		dataType: string
+		lineageTag: ae2de418-cc74-4d4d-93d9-3a33d9bba63a
+		summarizeBy: none
+		sourceColumn: Lap 10 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 10 - Avg Pace'
+		dataType: string
+		lineageTag: 061d5ced-7cd3-4b6f-8308-f82ccf3e590b
+		summarizeBy: none
+		sourceColumn: Lap 10 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 10 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: f3ecc98f-9372-40ec-9f13-c5b5376f7b79
+		summarizeBy: sum
+		sourceColumn: Lap 10 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 10 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: f31727dc-533e-44b3-b48e-ac8c087dc6ae
+		summarizeBy: sum
+		sourceColumn: Lap 10 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 11 - Interval'
+		dataType: string
+		lineageTag: ca95d7f0-b95a-4c62-8720-e6e8559656eb
+		summarizeBy: none
+		sourceColumn: Lap 11 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 11 - Step Type'
+		dataType: string
+		lineageTag: 59ca83c4-1a3f-47fd-9e4e-7a8a059193ff
+		summarizeBy: none
+		sourceColumn: Lap 11 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 11 - Time'
+		dataType: string
+		lineageTag: 646d6323-6536-44cf-99e9-540adb4bcdb5
+		summarizeBy: none
+		sourceColumn: Lap 11 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 11 - Distance'
+		dataType: string
+		lineageTag: 7ee447bc-828f-4118-b0b2-3249d89e36ed
+		summarizeBy: none
+		sourceColumn: Lap 11 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 11 - Avg Pace'
+		dataType: string
+		lineageTag: bb5a92e3-8a50-4785-a2ff-378a4e73506b
+		summarizeBy: none
+		sourceColumn: Lap 11 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 11 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 62fae1c2-d7b2-4cbc-8a50-89c8657d2c8f
+		summarizeBy: sum
+		sourceColumn: Lap 11 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 11 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 33fb635d-9876-44f7-b047-2e01f4a0a328
+		summarizeBy: sum
+		sourceColumn: Lap 11 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 12 - Interval'
+		dataType: string
+		lineageTag: 9c1d528a-a177-48c7-a50b-b8f366077279
+		summarizeBy: none
+		sourceColumn: Lap 12 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 12 - Step Type'
+		dataType: string
+		lineageTag: 10cb0b46-4f0b-4a22-85a5-85ffa842d07f
+		summarizeBy: none
+		sourceColumn: Lap 12 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 12 - Time'
+		dataType: string
+		lineageTag: 4311401b-a503-44eb-ae7b-f7a97bbaa1a4
+		summarizeBy: none
+		sourceColumn: Lap 12 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 12 - Distance'
+		dataType: string
+		lineageTag: 4b133c22-4ff9-4bd0-a02b-ab03ed369123
+		summarizeBy: none
+		sourceColumn: Lap 12 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 12 - Avg Pace'
+		dataType: string
+		lineageTag: a774daa3-ffdf-41b6-8737-88dc821f922c
+		summarizeBy: none
+		sourceColumn: Lap 12 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 12 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 09153184-3bf7-4144-9f4e-63dcf33b90a1
+		summarizeBy: sum
+		sourceColumn: Lap 12 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 12 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: c4e7dbc2-9265-4582-a298-6d8788bb5bae
+		summarizeBy: sum
+		sourceColumn: Lap 12 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 13 - Interval'
+		dataType: string
+		lineageTag: 4aaa69fd-9e1b-4356-a1aa-aad6aad24bed
+		summarizeBy: none
+		sourceColumn: Lap 13 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 13 - Step Type'
+		dataType: string
+		lineageTag: a78df1f5-c222-41ee-a5c1-da5dc68af5fb
+		summarizeBy: none
+		sourceColumn: Lap 13 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 13 - Time'
+		dataType: string
+		lineageTag: f6603822-32f2-4104-9fe4-f453be6fd221
+		summarizeBy: none
+		sourceColumn: Lap 13 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 13 - Distance'
+		dataType: string
+		lineageTag: 70bf55d8-6b49-4791-9ad7-db3e4ad410d5
+		summarizeBy: none
+		sourceColumn: Lap 13 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 13 - Avg Pace'
+		dataType: string
+		lineageTag: d2559402-bc27-459c-bf39-2a2640e12eb8
+		summarizeBy: none
+		sourceColumn: Lap 13 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 13 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: c6768e1d-c46d-4c92-b3d0-5576ae25ff0d
+		summarizeBy: sum
+		sourceColumn: Lap 13 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 13 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: a31312f0-274a-499d-bdb9-9db4eacf4807
+		summarizeBy: sum
+		sourceColumn: Lap 13 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 14 - Interval'
+		dataType: string
+		lineageTag: 39fc1219-d11c-492d-a5f4-3d82f6c02e95
+		summarizeBy: none
+		sourceColumn: Lap 14 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 14 - Step Type'
+		dataType: string
+		lineageTag: 4c732e11-13cf-43fe-9be4-e99240b862e8
+		summarizeBy: none
+		sourceColumn: Lap 14 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 14 - Time'
+		dataType: string
+		lineageTag: 43803f48-27f4-40fe-9e15-2a5cb410be86
+		summarizeBy: none
+		sourceColumn: Lap 14 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 14 - Distance'
+		dataType: string
+		lineageTag: 60f1561f-3a49-484c-ae3a-6e5a60593086
+		summarizeBy: none
+		sourceColumn: Lap 14 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 14 - Avg Pace'
+		dataType: string
+		lineageTag: 1da4c189-e840-4a3d-9363-7d2609c5ea8a
+		summarizeBy: none
+		sourceColumn: Lap 14 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 14 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: d0f7e93b-a057-4c55-9895-6142b14ad267
+		summarizeBy: sum
+		sourceColumn: Lap 14 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 14 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1caf7935-8904-41bb-84cc-b4626d8572db
+		summarizeBy: sum
+		sourceColumn: Lap 14 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 15 - Interval'
+		dataType: string
+		lineageTag: febed884-88d7-40b9-91c4-d8ec86252673
+		summarizeBy: none
+		sourceColumn: Lap 15 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 15 - Step Type'
+		dataType: string
+		lineageTag: 0eda51f8-a2c5-4dfc-8dca-c060b41c8bfa
+		summarizeBy: none
+		sourceColumn: Lap 15 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 15 - Time'
+		dataType: string
+		lineageTag: 857a3e96-66f3-4dfb-be20-81d5d0ebfd0e
+		summarizeBy: none
+		sourceColumn: Lap 15 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 15 - Distance'
+		dataType: string
+		lineageTag: 18945707-794b-4ddd-8c36-9a240ce314b2
+		summarizeBy: none
+		sourceColumn: Lap 15 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 15 - Avg Pace'
+		dataType: string
+		lineageTag: 22c2f149-d412-4e22-9adc-993a0b4a2334
+		summarizeBy: none
+		sourceColumn: Lap 15 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 15 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0f0a71b7-e478-4d70-99ae-96533521217f
+		summarizeBy: sum
+		sourceColumn: Lap 15 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 15 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 748b6539-1c90-4c7a-aec6-d08636818db3
+		summarizeBy: sum
+		sourceColumn: Lap 15 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 16 - Interval'
+		dataType: string
+		lineageTag: fb078f48-e322-49b1-a442-497db67607c2
+		summarizeBy: none
+		sourceColumn: Lap 16 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 16 - Step Type'
+		dataType: string
+		lineageTag: fad93839-3eb1-4fa3-9905-264337b26baa
+		summarizeBy: none
+		sourceColumn: Lap 16 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 16 - Time'
+		dataType: string
+		lineageTag: 2f15df27-f570-48f6-b512-db2f6c063d77
+		summarizeBy: none
+		sourceColumn: Lap 16 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 16 - Distance'
+		dataType: string
+		lineageTag: 54b0c52f-e4a0-4ec4-b090-5e878470f4f8
+		summarizeBy: none
+		sourceColumn: Lap 16 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 16 - Avg Pace'
+		dataType: string
+		lineageTag: 4b1adde9-a15b-41be-a5ce-2d3eb7b04932
+		summarizeBy: none
+		sourceColumn: Lap 16 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 16 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 859888c4-8601-4dc9-9bd6-5f4942476a93
+		summarizeBy: sum
+		sourceColumn: Lap 16 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 16 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: fe8e78b8-83bf-41ab-9214-44883bfa4870
+		summarizeBy: sum
+		sourceColumn: Lap 16 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 17 - Interval'
+		dataType: string
+		lineageTag: b546edff-2e87-4fd4-9258-317fba4e04c1
+		summarizeBy: none
+		sourceColumn: Lap 17 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 17 - Step Type'
+		dataType: string
+		lineageTag: 730fbd8a-0a26-4717-8343-a08536beb511
+		summarizeBy: none
+		sourceColumn: Lap 17 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 17 - Time'
+		dataType: string
+		lineageTag: 8b6d5415-2961-47ea-98ff-5d9f4f947d3f
+		summarizeBy: none
+		sourceColumn: Lap 17 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 17 - Distance'
+		dataType: string
+		lineageTag: a467af8d-aacc-4f62-b570-305abdc4fa10
+		summarizeBy: none
+		sourceColumn: Lap 17 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 17 - Avg Pace'
+		dataType: string
+		lineageTag: 70eb535c-7f91-4a8c-be0a-b2bd16758321
+		summarizeBy: none
+		sourceColumn: Lap 17 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 17 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: ac5ae8f3-d59f-4287-ac86-f96ef6dbcd24
+		summarizeBy: sum
+		sourceColumn: Lap 17 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 17 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: fbd19fe8-9e25-4735-b95e-c1eca24daf26
+		summarizeBy: sum
+		sourceColumn: Lap 17 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 18 - Interval'
+		dataType: string
+		lineageTag: 14656005-671a-491b-9813-8ee9bc3f53be
+		summarizeBy: none
+		sourceColumn: Lap 18 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 18 - Step Type'
+		dataType: string
+		lineageTag: bda56f04-6bdb-45a4-937e-36d1e50b2c5c
+		summarizeBy: none
+		sourceColumn: Lap 18 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 18 - Time'
+		dataType: string
+		lineageTag: fae030ef-61d7-491d-a30d-6d6cf1cc6517
+		summarizeBy: none
+		sourceColumn: Lap 18 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 18 - Distance'
+		dataType: string
+		lineageTag: 8f0ba6ce-facd-4d59-bad8-ce9ee777a193
+		summarizeBy: none
+		sourceColumn: Lap 18 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 18 - Avg Pace'
+		dataType: string
+		lineageTag: 31e13799-660d-444b-b941-b968a1c6bde2
+		summarizeBy: none
+		sourceColumn: Lap 18 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 18 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 35989355-cc56-45b9-91f8-d0fd8f722bf3
+		summarizeBy: sum
+		sourceColumn: Lap 18 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 18 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: be43b229-1c25-4f32-b45c-a66e25e2157c
+		summarizeBy: sum
+		sourceColumn: Lap 18 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 19 - Interval'
+		dataType: string
+		lineageTag: 441d5354-d774-49a3-9c21-9b0d29cc5c59
+		summarizeBy: none
+		sourceColumn: Lap 19 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 19 - Step Type'
+		dataType: string
+		lineageTag: 2ecf47bc-fb89-47a4-a170-46368226f865
+		summarizeBy: none
+		sourceColumn: Lap 19 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 19 - Time'
+		dataType: string
+		lineageTag: d397b4e6-62f3-4413-a57c-0efdbf78b1bd
+		summarizeBy: none
+		sourceColumn: Lap 19 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 19 - Distance'
+		dataType: string
+		lineageTag: b53460db-2157-4017-8628-2eb21c193218
+		summarizeBy: none
+		sourceColumn: Lap 19 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 19 - Avg Pace'
+		dataType: string
+		lineageTag: d2ccb6eb-1a3b-49d1-8fce-88b409d17e57
+		summarizeBy: none
+		sourceColumn: Lap 19 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 19 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4e0393c4-5290-4110-b37d-a9274a372180
+		summarizeBy: sum
+		sourceColumn: Lap 19 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 19 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: c60652d6-ff64-4677-a59b-bc10dce03a67
+		summarizeBy: sum
+		sourceColumn: Lap 19 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 20 - Interval'
+		dataType: string
+		lineageTag: 9a575318-8a91-4bbf-b293-4daa2496d6e1
+		summarizeBy: none
+		sourceColumn: Lap 20 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 20 - Step Type'
+		dataType: string
+		lineageTag: a15810fe-2e25-4432-8b35-f05d771a1c88
+		summarizeBy: none
+		sourceColumn: Lap 20 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 20 - Time'
+		dataType: string
+		lineageTag: cf1243e3-894a-4fcb-8d18-d97eb317cfee
+		summarizeBy: none
+		sourceColumn: Lap 20 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 20 - Distance'
+		dataType: string
+		lineageTag: 377da7d2-7b5e-49e4-b228-d7c6809ad059
+		summarizeBy: none
+		sourceColumn: Lap 20 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 20 - Avg Pace'
+		dataType: string
+		lineageTag: e5a456a7-aef1-46ad-a7bf-123c56969e49
+		summarizeBy: none
+		sourceColumn: Lap 20 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 20 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6de7cb13-5bba-43d0-be15-872fe49b3a5e
+		summarizeBy: sum
+		sourceColumn: Lap 20 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 20 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 608fb834-1eed-4905-897b-3ab2991c6442
+		summarizeBy: sum
+		sourceColumn: Lap 20 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 21 - Interval'
+		dataType: string
+		lineageTag: e12b686d-7671-47a3-a4c7-9b180d3b5f7c
+		summarizeBy: none
+		sourceColumn: Lap 21 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 21 - Step Type'
+		dataType: string
+		lineageTag: c0555e38-2a82-47b7-a637-ddca3da902c0
+		summarizeBy: none
+		sourceColumn: Lap 21 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 21 - Time'
+		dataType: string
+		lineageTag: 89c98913-81fc-4cf9-ad8a-53b3a1f54cf2
+		summarizeBy: none
+		sourceColumn: Lap 21 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 21 - Distance'
+		dataType: string
+		lineageTag: a7b58f5e-984e-467e-97a4-d1ad2bb3be81
+		summarizeBy: none
+		sourceColumn: Lap 21 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 21 - Avg Pace'
+		dataType: string
+		lineageTag: 2f4fd7fb-bd7c-4b94-b0e0-49d8feeaf3de
+		summarizeBy: none
+		sourceColumn: Lap 21 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 21 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 68082024-47be-4829-b480-4fe5ad39c257
+		summarizeBy: sum
+		sourceColumn: Lap 21 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 21 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: e499e0db-1c77-4972-822e-e065487b54c6
+		summarizeBy: sum
+		sourceColumn: Lap 21 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 22 - Interval'
+		dataType: string
+		lineageTag: 3259c85f-2876-4c31-b8c9-eb4284823ed2
+		summarizeBy: none
+		sourceColumn: Lap 22 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 22 - Step Type'
+		dataType: string
+		lineageTag: 7cb3c0fd-80a9-4a21-8adc-79a41f0977b7
+		summarizeBy: none
+		sourceColumn: Lap 22 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 22 - Time'
+		dataType: string
+		lineageTag: 8c5fb4ec-ed7b-414d-9f62-9d9d8da78b85
+		summarizeBy: none
+		sourceColumn: Lap 22 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 22 - Distance'
+		dataType: string
+		lineageTag: 1e6be22d-a018-44bb-b441-47071bfd9c69
+		summarizeBy: none
+		sourceColumn: Lap 22 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 22 - Avg Pace'
+		dataType: string
+		lineageTag: 3cee1f7b-a4c0-4e0d-9e10-6b8efd9fcf77
+		summarizeBy: none
+		sourceColumn: Lap 22 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 22 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2d8ba9c4-4a48-4799-881f-5f1d2c81928f
+		summarizeBy: sum
+		sourceColumn: Lap 22 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 22 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: ad6383cd-61db-4f31-b708-21276c6617c4
+		summarizeBy: sum
+		sourceColumn: Lap 22 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 23 - Interval'
+		dataType: string
+		lineageTag: c99a1b8f-9565-41f3-a6d5-1cb0fe9b5e74
+		summarizeBy: none
+		sourceColumn: Lap 23 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 23 - Step Type'
+		dataType: string
+		lineageTag: 771d3480-39d9-4d80-b2b6-820b8079ced2
+		summarizeBy: none
+		sourceColumn: Lap 23 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 23 - Time'
+		dataType: string
+		lineageTag: 6f442e18-d5c0-40fe-9441-752a1d3702c9
+		summarizeBy: none
+		sourceColumn: Lap 23 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 23 - Distance'
+		dataType: string
+		lineageTag: 2a2aea1c-7ba3-4412-9d35-857363016ccc
+		summarizeBy: none
+		sourceColumn: Lap 23 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 23 - Avg Pace'
+		dataType: string
+		lineageTag: c074edee-8dcf-4854-a716-9cae88e8e5f5
+		summarizeBy: none
+		sourceColumn: Lap 23 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 23 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2d85743a-cafb-4f83-8d36-3b106073b140
+		summarizeBy: sum
+		sourceColumn: Lap 23 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 23 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: b34386c6-09b9-456a-a4e6-8d73f4fb8ae3
+		summarizeBy: sum
+		sourceColumn: Lap 23 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 24 - Interval'
+		dataType: string
+		lineageTag: 52523e19-3ac0-42a1-a4e3-bded7c42d1bf
+		summarizeBy: none
+		sourceColumn: Lap 24 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 24 - Step Type'
+		dataType: string
+		lineageTag: 9d2a7bc0-44ed-412b-8336-d9ea95f07985
+		summarizeBy: none
+		sourceColumn: Lap 24 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 24 - Time'
+		dataType: string
+		lineageTag: bde5768b-8850-4975-bd13-14e15ca1eb8a
+		summarizeBy: none
+		sourceColumn: Lap 24 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 24 - Distance'
+		dataType: string
+		lineageTag: 14d17533-f4e3-40e0-8921-2ddb836ea9b9
+		summarizeBy: none
+		sourceColumn: Lap 24 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 24 - Avg Pace'
+		dataType: string
+		lineageTag: aef038c2-9315-4908-96b0-58e0c803166d
+		summarizeBy: none
+		sourceColumn: Lap 24 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 24 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4c93fc9a-b86d-437e-a3cd-f30907628c95
+		summarizeBy: sum
+		sourceColumn: Lap 24 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 24 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f6a9c2f-6bfb-4b60-b8be-0ace475e3729
+		summarizeBy: sum
+		sourceColumn: Lap 24 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 25 - Interval'
+		dataType: string
+		lineageTag: 871e8751-9489-4125-9a10-4009b9edb1eb
+		summarizeBy: none
+		sourceColumn: Lap 25 - Interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 25 - Step Type'
+		dataType: string
+		lineageTag: e8b5c394-bedd-44ab-bc00-4284b3357db9
+		summarizeBy: none
+		sourceColumn: Lap 25 - Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 25 - Time'
+		dataType: string
+		lineageTag: 3cc8a362-09ff-45b7-9f8d-48d8fe26880f
+		summarizeBy: none
+		sourceColumn: Lap 25 - Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 25 - Distance'
+		dataType: string
+		lineageTag: 2f69091d-8cd8-4002-aa2e-5924b6f17e6a
+		summarizeBy: none
+		sourceColumn: Lap 25 - Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 25 - Avg Pace'
+		dataType: string
+		lineageTag: c7476c1a-c53a-41fb-a84b-e17bbc1cc6b8
+		summarizeBy: none
+		sourceColumn: Lap 25 - Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 25 - Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4c843991-9307-4393-8fee-414e7cbee34e
+		summarizeBy: sum
+		sourceColumn: Lap 25 - Avg HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap 25 - Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 39df8ec3-3b36-4ea1-b479-0231963ca470
+		summarizeBy: sum
+		sourceColumn: Lap 25 - Max HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg Run HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 20829c9d-232c-400d-8873-4e23c20fef5d
+		summarizeBy: sum
+		sourceColumn: Avg Run HR
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Max Run HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: efb07a2c-2c8f-49f7-8534-53a1f722924b
+		summarizeBy: sum
+		sourceColumn: Max Run HR
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Splits - Daily' = m
+		mode: import
+		source = ```
+				let
+				    Source = #"Splits CSV Input", 
+				    
+				    #"Filtered Distance" = Table.SelectRows(Source, each Number.From([Distance]) >= 0.06),
+				    #"Selected Columns" = Table.SelectColumns(#"Filtered Distance", {"Run Date", "Interval", "Step Type", "Lap", "Time", "Distance", "Avg Pace", "Avg HR", "Max HR"}),
+				    
+				    // --> NEW: Added standard rounding to the Average HR calculation
+				    #"Grouped Summary" = Table.Group(#"Selected Columns", {"Run Date"}, {
+				        {"Avg Run HR", each Number.Round(List.Average([Avg HR]), 0, RoundingMode.AwayFromZero), Int64.Type},
+				        {"Max Run HR", each List.Max([Max HR]), Int64.Type}
+				    }),
+				    
+				    #"Unpivoted Columns" = Table.UnpivotOtherColumns(#"Selected Columns", {"Run Date", "Lap"}, "Metric", "Value"),
+				    #"Added Header Name" = Table.AddColumn(#"Unpivoted Columns", "New Header", each "Lap " & Text.From([Lap]) & " - " & [Metric]),
+				    #"Removed Old Columns" = Table.RemoveColumns(#"Added Header Name",{"Lap", "Metric"}),
+				    #"Pivoted Intervals" = Table.Pivot(#"Removed Old Columns", List.Distinct(#"Removed Old Columns"[New Header]), "New Header", "Value"),
+				    #"Merged Summary" = Table.NestedJoin(#"Pivoted Intervals", {"Run Date"}, #"Grouped Summary", {"Run Date"}, "Summary", JoinKind.LeftOuter),
+				    #"Expanded Summary" = Table.ExpandTableColumn(#"Merged Summary", "Summary", {"Avg Run HR", "Max Run HR"}, {"Avg Run HR", "Max Run HR"})
+				in
+				    #"Expanded Summary"
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

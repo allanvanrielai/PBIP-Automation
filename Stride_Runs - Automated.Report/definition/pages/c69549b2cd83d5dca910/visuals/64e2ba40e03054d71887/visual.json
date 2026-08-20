@@ -1,0 +1,71 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "64e2ba40e03054d71887",
+  "position": {
+    "x": 6.2330833271477886,
+    "y": 51.702835785662252,
+    "z": 12000,
+    "height": 147.85587614356089,
+    "width": 659.70443349753691,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Stride Runs"
+                    }
+                  },
+                  "Property": "Comments"
+                }
+              },
+              "queryRef": "Stride Runs.Comments",
+              "nativeQueryRef": "Comments1"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Stride Runs"
+                  }
+                },
+                "Property": "Comments"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "429a7be7d6ebd53521d3"
+}

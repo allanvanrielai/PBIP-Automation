@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "author": {
+    "name": "Mint Management Technologies",
+    "email": "tiaan.rossouw@mintgroup.net"
+  },
+  "resources": [
+    {
+      "resourceId": "rId0",
+      "sourceType": 5,
+      "file": "resources/itemDetails7AF21ECC19D54ECB9D8A4C3EFE7471F1.pbiviz.json"
+    }
+  ],
+  "visual": {
+    "guid": "itemDetails7AF21ECC19D54ECB9D8A4C3EFE7471F1",
+    "name": "itemDetails",
+    "displayName": "Information Box by Mint",
+    "version": "1.0.0",
+    "description": "Easy to configure visual to display fields in a details or information view.",
+    "supportUrl": "www.mintgroup.net",
+    "gitHubUrl": "",
+    "visualClassName": "Visual"
+  },
+  "metadata": {
+    "pbivizjson": {
+      "resourceId": "rId0"
+    }
+  }
+}

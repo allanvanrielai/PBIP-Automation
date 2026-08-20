@@ -1,0 +1,355 @@
+table 'TCX Data'
+	lineageTag: 96ff509d-124c-47d4-b723-58baefce9596
+
+	column Id
+		dataType: string
+		lineageTag: 326dcabe-8895-4974-82af-bcefb342a315
+		summarizeBy: none
+		sourceColumn: Id
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap Total (Sec)'
+		dataType: string
+		isHidden
+		lineageTag: f7505183-3c19-483e-a2e8-4a76cf1b8326
+		summarizeBy: none
+		sourceColumn: Lap Total (Sec)
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap Distance (Metre)'
+		dataType: string
+		lineageTag: 088c4b19-e374-4a59-ab95-843a607c8668
+		summarizeBy: none
+		sourceColumn: Lap Distance (Metre)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap Max Speed'
+		dataType: string
+		lineageTag: 0d56b604-9e20-4eac-9ca0-437a18c0f261
+		summarizeBy: none
+		sourceColumn: Lap Max Speed
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap Calories'
+		dataType: string
+		lineageTag: c2283617-c90b-4941-a848-59002acef950
+		summarizeBy: none
+		sourceColumn: Lap Calories
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap Start Time'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8f6ff291-4fd9-4ed1-ac67-95c73fd5cebe
+		summarizeBy: none
+		sourceColumn: Lap Start Time
+
+		variation Variation
+			isDefault
+			relationship: 975255ab-333d-42a5-abc3-fb418f65aaa4
+			defaultHierarchy: LocalDateTable_19ea987e-57ec-4e4f-8556-8ec043c0a19c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap Number' =
+			
+			RANKX(FILTER('TCX Data','TCX Data'[Id]=EARLIER('TCX Data'[Id])
+			),
+			'TCX Data'[Lap Start Time],
+			,
+			ASC,
+			Dense
+			)
+		dataType: int64
+		formatString: 00
+		lineageTag: f0e41359-1de8-4169-bf3f-1d114ef219f0
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column 'Run Date'
+		dataType: dateTime
+		formatString: yyyy/mm/dd
+		lineageTag: 593895e9-9078-45a4-8fff-0b1a0551cd31
+		summarizeBy: none
+		sourceColumn: Run Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column 'Run Time'
+		dataType: dateTime
+		formatString: hh:nn:ss
+		lineageTag: 5f51530c-72ba-45ae-929b-ad28799d39cb
+		summarizeBy: none
+		sourceColumn: Run Time
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Interval Number' =
+			
+			ROUNDDOWN(DIVIDE(('TCX Data'[Lap Number] - 1), 2) + 1, 0)
+		dataType: string
+		lineageTag: 8418f899-0dd0-46a7-a795-53787c3a4bf1
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap Ave HR'
+		dataType: string
+		lineageTag: 1d29a0b4-86d0-4fcd-9360-154891daf6cf
+		summarizeBy: none
+		sourceColumn: Lap Ave HR
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap Max HR'
+		dataType: string
+		lineageTag: c64a910f-5cb6-471b-9ac2-81c24e6733ae
+		summarizeBy: none
+		sourceColumn: Lap Max HR
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TP Time'
+		dataType: dateTime
+		formatString: yyyy/mm/dd h:nn:ss
+		lineageTag: 15ef6d9c-b4ac-4914-beba-a63037e026a4
+		summarizeBy: none
+		sourceColumn: TP Time
+
+		variation Variation
+			isDefault
+			relationship: 28151491-3736-49cf-9384-7db84986448a
+			defaultHierarchy: LocalDateTable_d3632625-55b9-4c11-9742-2783d05c72d0.'Date Hierarchy'
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column 'TP Altitude'
+		dataType: string
+		lineageTag: 57478ed5-f0b8-48c5-a611-7fd2a795d1fe
+		summarizeBy: none
+		sourceColumn: TP Altitude
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TP Distance'
+		dataType: string
+		lineageTag: a725749b-1c0c-4633-adcf-37675030e371
+		summarizeBy: none
+		sourceColumn: TP Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TP Position Latitude'
+		dataType: string
+		lineageTag: 285f7926-39df-41fa-b59c-61bb6c83f0b6
+		summarizeBy: none
+		sourceColumn: TP Position Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TP Position Longitude'
+		dataType: string
+		lineageTag: ce631f28-0d1d-4546-8dfa-8b522b790cdf
+		summarizeBy: none
+		sourceColumn: TP Position Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TP HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: bfdf003e-13d0-460c-9e34-609df9a42cd4
+		summarizeBy: none
+		sourceColumn: TP HR
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = User
+
+	column 'Interval Detail' =
+			
+			
+			If(MOD('TCX Data'[Lap Number], 2) = 0, 'TCX Data'[Interval Number] & " (" & 'TCX Data'[Lap Number] & ")" & " - Rec", 'TCX Data'[Interval Number] & " (" & 'TCX Data'[Lap Number] & ")" & " - Int")
+		lineageTag: d411bce4-c121-4af9-9266-1601fb0bdce3
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TP Seconds Indicator' = ```
+			IF(
+			    'TCX Data'[Lap Start Time] = 'TCX Data'[TP Time],
+			    0, 
+			    IF(MOD(SECOND('TCX Data'[TP Time - Only]), 5) > 0, 1, 0)
+			)
+			```
+		formatString: 0
+		lineageTag: a53d2e20-14c6-4075-bc52-e00e3cfcc197
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TP Time - Only'
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: a78c8265-02c7-43f3-83f6-aedf2df3bcdc
+		summarizeBy: none
+		sourceColumn: TP Time - Only
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column 'FirstLast Calc' = FORMAT('TCX Data'[Run Date],"yyyy-mm-dd") & "-" & 'TCX Data'[Lap Number]
+		lineageTag: 18310b54-b5af-421c-8f58-0d797ed0eac4
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'The Lap Number' = ```
+			
+			FORMAT('TCX Data'[Run Date],"yyyy/mm/dd") & "_" & 
+			RANKX(FILTER('TCX Data','TCX Data'[Id]=EARLIER('TCX Data'[Id])
+			),
+			'TCX Data'[Lap Start Time],
+			,
+			ASC,
+			Dense
+			)
+			```
+		lineageTag: 6dd8816a-c15c-48ce-90de-cabd7be96279
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateDetail = ```
+			
+			FORMAT('TCX Data'[Run Date], "yyyy/MM/dd")
+			    & " ("
+			    & RELATED('Stride Runs'[Details])
+			    & "; Ave Pace: "
+			    & FORMAT(RELATED('Stride Runs'[Run Ave Pace]), "mm:ss")
+			   
+			
+			```
+		lineageTag: 22dba94b-50d3-46fa-bf44-59d438fcb2be
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column CoralanDetail = "" & RELATED('Stride Runs'[Coralan])
+		lineageTag: 05dc4951-c297-425f-93f0-ddcbc8250c59
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date Lap Key' = FORMAT('TCX Data'[Run Date], "yyyy-MM-dd") & "_" & 'TCX Data'[Lap Number]
+		lineageTag: 49b1f1e9-f20e-4d6b-a134-93065aa15186
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalSeconds = HOUR('TCX Data'[TP Time]) * 3600 + MINUTE('TCX Data'[TP Time]) * 60 + SECOND('TCX Data'[TP Time])
+		formatString: 0
+		lineageTag: d6b15e66-d00a-4d9f-beee-ac54729ea765
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column SecondsIntoRun =
+			VAR StartTime = CALCULATE(
+			MIN('TCX Data'[TP Time - Only]),
+			ALLEXCEPT('TCX Data', 'TCX Data'[Run Date])
+			)
+			RETURN
+			DATEDIFF(StartTime, 'TCX Data'[TP Time - Only], SECOND)
+		dataType: int64
+		formatString: 0
+		lineageTag: 19920460-c5ee-44ff-8b1d-37d0226a62d5
+		summarizeBy: sum
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'TCX Data' = m
+		mode: import
+		source =
+				let
+				    Source = Folder.Files("D:\OneDrive\Running\Run Data For Import\TCX Run Input"),
+				    #"Filtered Hidden Files1" = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
+				    #"Invoke Custom Function1" = Table.AddColumn(#"Filtered Hidden Files1", "Transform File", each #"Transform File"([Content])),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Invoke Custom Function1", {"Name", "Source.Name"}),
+				    #"Removed Other Columns1" = Table.SelectColumns(#"Renamed Columns1", {"Source.Name", "Transform File"}),
+				    #"Expanded Table Column1" = Table.ExpandTableColumn(#"Removed Other Columns1", "Transform File", Table.ColumnNames(#"Transform File"(#"Sample File"))),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Expanded Table Column1",{{"Source.Name", type text}, {"Id", type datetime}, {"Lap", type any}, {"Creator", type any}, {"Attribute:Sport", type text}}),
+				    #"Expanded Lap" = Table.ExpandTableColumn(#"Changed Type", "Lap", {"TotalTimeSeconds", "DistanceMeters", "MaximumSpeed", "Calories", "AverageHeartRateBpm", "MaximumHeartRateBpm", "Intensity", "TriggerMethod", "Track", "Extensions", "Attribute:StartTime"}, {"Lap.TotalTimeSeconds", "Lap.DistanceMeters", "Lap.MaximumSpeed", "Lap.Calories", "Lap.AverageHeartRateBpm", "Lap.MaximumHeartRateBpm", "Lap.Intensity", "Lap.TriggerMethod", "Lap.Track", "Lap.Extensions", "Lap.Attribute:StartTime"}),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Expanded Lap", "Id", "Id - Copy"),
+				    #"Split Column by Delimiter" = Table.SplitColumn(Table.TransformColumnTypes(#"Duplicated Column", {{"Id - Copy", type text}}, "en-US"), "Id - Copy", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"Id - Copy.1", "Id - Copy.2"}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"Id - Copy.1", type date}, {"Id - Copy.2", type time}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type1",{{"Id - Copy.1", "Run Date"}, {"Id - Copy.2", "Run Time"}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Renamed Columns",{"Source.Name"}),
+				    #"Renamed Columns2" = Table.RenameColumns(#"Removed Columns",{{"Lap.MaximumSpeed", "Lap Max Speed"}, {"Lap.Calories", "Lap Calories"}, {"Lap.AverageHeartRateBpm", "Lap Ave HR"}, {"Lap.MaximumHeartRateBpm", "Lap Max HR"}}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Renamed Columns2",{"Lap.Intensity", "Lap.TriggerMethod"}),
+				    #"Renamed Columns3" = Table.RenameColumns(#"Removed Columns1",{{"Lap.Attribute:StartTime", "Lap Start Time"}}),
+				    #"Removed Columns2" = Table.RemoveColumns(#"Renamed Columns3",{"Attribute:Sport", "Creator"}),
+				    #"Expanded Lap Ave HR" = Table.ExpandTableColumn(#"Removed Columns2", "Lap Ave HR", {"Value"}, {"Lap Ave HR.Value"}),
+				    #"Renamed Columns4" = Table.RenameColumns(#"Expanded Lap Ave HR",{{"Lap Ave HR.Value", "Lap Ave HR"}}),
+				    #"Expanded Lap Max HR" = Table.ExpandTableColumn(#"Renamed Columns4", "Lap Max HR", {"Value"}, {"Lap Max HR.Value"}),
+				    #"Renamed Columns5" = Table.RenameColumns(#"Expanded Lap Max HR",{{"Lap Max HR.Value", "Lap Max HR"}}),
+				    #"Removed Columns3" = Table.RemoveColumns(#"Renamed Columns5",{"Lap.Extensions"}),
+				    #"Expanded Lap.Track" = Table.ExpandTableColumn(#"Removed Columns3", "Lap.Track", {"Trackpoint"}, {"Lap.Track.Trackpoint"}),
+				    #"Renamed Columns6" = Table.RenameColumns(#"Expanded Lap.Track",{{"Lap.Track.Trackpoint", "TrackPoint"}}),
+				    #"Expanded TrackPoint" = Table.ExpandTableColumn(#"Renamed Columns6", "TrackPoint", {"Time", "Position", "AltitudeMeters", "DistanceMeters", "HeartRateBpm", "Extensions"}, {"TrackPoint.Time", "TrackPoint.Position", "TrackPoint.AltitudeMeters", "TrackPoint.DistanceMeters", "TrackPoint.HeartRateBpm", "TrackPoint.Extensions"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Expanded TrackPoint", each true),
+				    #"Renamed Columns7" = Table.RenameColumns(#"Filtered Rows",{{"TrackPoint.Time", "TP Time"}}),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Renamed Columns7",{{"TP Time", type datetime}, {"Lap Start Time", type datetime}}),
+				    #"Expanded TrackPoint.Position" = Table.ExpandTableColumn(#"Changed Type3", "TrackPoint.Position", {"LatitudeDegrees", "LongitudeDegrees"}, {"TrackPoint.Position.LatitudeDegrees", "TrackPoint.Position.LongitudeDegrees"}),
+				    #"Renamed Columns8" = Table.RenameColumns(#"Expanded TrackPoint.Position",{{"TrackPoint.Position.LatitudeDegrees", "TP Position Latitude"}, {"TrackPoint.Position.LongitudeDegrees", "TP Position Longitude"}, {"TrackPoint.AltitudeMeters", "TP Altitude"}, {"TrackPoint.DistanceMeters", "TP Distance"}, {"TrackPoint.HeartRateBpm", "TP HR"}}),
+				    #"Expanded TP HR" = Table.ExpandTableColumn(#"Renamed Columns8", "TP HR", {"Value"}, {"TP HR.Value"}),
+				    #"Renamed Columns9" = Table.RenameColumns(#"Expanded TP HR",{{"TP HR.Value", "TP HR"}}),
+				    #"Removed Columns4" = Table.RemoveColumns(#"Renamed Columns9",{"TrackPoint.Extensions"}),
+				    #"Renamed Columns10" = Table.RenameColumns(#"Removed Columns4",{{"Lap.TotalTimeSeconds", "Lap Total (Sec)"}, {"Lap.DistanceMeters", "Lap Distance (Metre)"}}),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Renamed Columns10",{{"TP Time", type text}}),
+				    #"Duplicated Column1" = Table.DuplicateColumn(#"Changed Type2", "TP Time", "TP Time - Copy"),
+				    #"Renamed Columns11" = Table.RenameColumns(#"Duplicated Column1",{{"TP Time - Copy", "TP Time - Only"}}),
+				    #"Changed Type4" = Table.TransformColumnTypes(#"Renamed Columns11",{{"TP HR", type text}}),
+				    #"Removed Duplicates" = Table.Distinct(#"Changed Type4", {"TP Time"}),
+				    #"Changed Type5" = Table.TransformColumnTypes(#"Removed Duplicates",{{"Run Date", type date}}),
+				    #"Filtered Rows1" = Table.SelectRows(#"Changed Type5", each true)
+				in
+				    #"Filtered Rows1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

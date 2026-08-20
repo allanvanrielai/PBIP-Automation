@@ -1,0 +1,88 @@
+expression Parameter1 = #"Sample File" meta [IsParameterQuery=true, BinaryIdentifier=#"Sample File", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 44bf0434-8c59-442f-8bd4-ddeef5ea5ee7
+	queryGroup: 'Transform File from TCX Data\Helper Queries'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transform Sample File' =
+		let
+		    Source = Xml.Tables(Parameter1),
+		    Table0 = Source{0}[Table],
+		    Table1 = Table0{0}[Table]
+		in
+		    Table1
+	lineageTag: 71372c66-41a8-40d5-8723-394a7cdad10d
+	queryGroup: 'Transform File from TCX Data'
+
+	annotation PBI_ResultType = Table
+
+expression 'Sample File' =
+		let
+		    Source = Folder.Files("D:\OneDrive\Running\Run Data For Import\TCX Run Input"),
+		    Navigation1 = Source{0}[Content]
+		in
+		    Navigation1
+	lineageTag: fa369d68-90fe-4dd0-a1d0-23844d88f84b
+	queryGroup: 'Transform File from TCX Data\Helper Queries'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transform File' =
+		let
+		    Source = (Parameter1 as binary) => let
+		    Source = Xml.Tables(Parameter1),
+		    Table0 = Source{0}[Table],
+		    Table1 = Table0{0}[Table]
+		in
+		    Table1
+		in
+		    Source
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""Transform Sample File""}" ]
+	lineageTag: 5d8da4f0-e0d2-4f3b-8a18-3f89dcab99de
+	queryGroup: 'Transform File from TCX Data\Helper Queries'
+
+	annotation PBI_ResultType = Function
+
+expression Parameter2 = #"Sample File (2)" meta [IsParameterQuery=true, BinaryIdentifier=#"Sample File (2)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 8b8181df-4367-466e-8e14-19c948fcbb0b
+	queryGroup: 'Transform File from Splits CSV Input\Helper Queries'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Sample File (2)' =
+		let
+		    Source = Folder.Files("D:\OneDrive\Running\Run Data For Import\Splits CSV Input"),
+		    Navigation1 = Source{0}[Content]
+		in
+		    Navigation1
+	lineageTag: f940ced7-686c-41fa-b7c1-931472aed0a7
+	queryGroup: 'Transform File from Splits CSV Input\Helper Queries'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transform Sample File (2)' =
+		let
+		    Source = Csv.Document(Parameter2,[Delimiter=",", Columns=23, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+		in
+		    #"Promoted Headers"
+	lineageTag: b5c69312-efc2-48d0-bb31-359dbe3a8d0f
+	queryGroup: 'Transform File from Splits CSV Input'
+
+	annotation PBI_ResultType = Table
+
+expression 'Transform File (2)' =
+		let
+		    Source = (Parameter2 as binary) => let
+		    Source = Csv.Document(Parameter2,[Delimiter=",", Columns=23, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+		in
+		    #"Promoted Headers"
+		in
+		    Source
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""Transform Sample File (2)""}" ]
+	lineageTag: 2f167b9a-5772-444f-9620-d97def4e9d5d
+	queryGroup: 'Transform File from Splits CSV Input\Helper Queries'
+
+	annotation PBI_ResultType = Function
+

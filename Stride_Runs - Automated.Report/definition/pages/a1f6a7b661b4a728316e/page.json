@@ -1,0 +1,95 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "a1f6a7b661b4a728316e",
+  "displayName": "Data Listing",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "07a13080289e1666d471",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Running"
+              }
+            },
+            "Property": "Date"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "68174fa52c4acbbbcbd3",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "553d7da70dbd0999eb22",
+        "boundFilter": "07a13080289e1666d471",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Running"
+              }
+            },
+            "Property": "Date"
+          }
+        }
+      }
+    ]
+  },
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#1D1E29'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "e27ac28303e59c7e12c2",
+      "target": "76128cc0595632d71e5b",
+      "type": "NoFilter"
+    },
+    {
+      "source": "e27ac28303e59c7e12c2",
+      "target": "994601760280ed350371",
+      "type": "DataFilter"
+    },
+    {
+      "source": "76128cc0595632d71e5b",
+      "target": "11992d2e4bab4dd4d109",
+      "type": "DataFilter"
+    },
+    {
+      "source": "76128cc0595632d71e5b",
+      "target": "e27ac28303e59c7e12c2",
+      "type": "DataFilter"
+    }
+  ]
+}

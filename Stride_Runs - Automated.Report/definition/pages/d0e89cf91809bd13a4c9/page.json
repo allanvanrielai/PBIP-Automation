@@ -1,0 +1,111 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "d0e89cf91809bd13a4c9",
+  "displayName": "HR Acc - Specific",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f61c28233b8ded5325a9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "TCX Data"
+              }
+            },
+            "Property": "Lap Number"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "056c837c0500d0edd327",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Running"
+              }
+            },
+            "Property": "Run Type"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "835f014a180256baa690",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "432a1d26459d1712c859",
+        "boundFilter": "f61c28233b8ded5325a9",
+        "asAggregation": true,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "TCX Data"
+              }
+            },
+            "Property": "Lap Number"
+          }
+        }
+      }
+    ]
+  },
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#1D1E29'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "e47f82a1a5d3018eca9e",
+      "target": "a02f331958ed28cd2899",
+      "type": "NoFilter"
+    },
+    {
+      "source": "a02f331958ed28cd2899",
+      "target": "e47f82a1a5d3018eca9e",
+      "type": "NoFilter"
+    },
+    {
+      "source": "a02f331958ed28cd2899",
+      "target": "91071665294d0a7d424a",
+      "type": "NoFilter"
+    },
+    {
+      "source": "a02f331958ed28cd2899",
+      "target": "e10e28c562457c2731c8",
+      "type": "NoFilter"
+    }
+  ]
+}

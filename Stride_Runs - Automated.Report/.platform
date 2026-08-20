@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Stride_Runs - Automated"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7c763f9e-dfdd-4f7a-aa5f-18bf0be3ddbc"
+  }
+}

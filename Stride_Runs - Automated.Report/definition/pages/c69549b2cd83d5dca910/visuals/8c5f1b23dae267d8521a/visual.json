@@ -1,0 +1,305 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "8c5f1b23dae267d8521a",
+  "position": {
+    "x": 604.984802431611,
+    "y": 125.47112462006079,
+    "z": 12000,
+    "height": 322.91793313069911,
+    "width": 659.452887537994,
+    "tabOrder": 10000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Splits CSV Input"
+                    }
+                  },
+                  "Property": "Lap"
+                }
+              },
+              "queryRef": "Splits CSV Input.Lap",
+              "nativeQueryRef": "Lap"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Splits CSV Input"
+                    }
+                  },
+                  "Property": "Step Type"
+                }
+              },
+              "queryRef": "Splits CSV Input.Step Type",
+              "nativeQueryRef": "Step Type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Splits CSV Input"
+                    }
+                  },
+                  "Property": "Distance"
+                }
+              },
+              "queryRef": "Splits CSV Input.Distance",
+              "nativeQueryRef": "Distance"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Splits CSV Input"
+                    }
+                  },
+                  "Property": "Avg Pace"
+                }
+              },
+              "queryRef": "Splits CSV Input.Avg Pace",
+              "nativeQueryRef": "Avg Pace"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Splits CSV Input"
+                        }
+                      },
+                      "Property": "Avg HR"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Splits CSV Input.Avg HR)",
+              "nativeQueryRef": "Avg HR"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Splits CSV Input"
+                        }
+                      },
+                      "Property": "Max HR"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Splits CSV Input.Max HR)",
+              "nativeQueryRef": "Max HR"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Splits CSV Input"
+                        }
+                      },
+                      "Property": "Total Ascent"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Splits CSV Input.Total Ascent)",
+              "nativeQueryRef": "Total Ascent"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Splits CSV Input"
+                        }
+                      },
+                      "Property": "Total Descent"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Splits CSV Input.Total Descent)",
+              "nativeQueryRef": "Total Descent"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "47.57869408374281D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Splits CSV Input.Lap"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "99.92110453508542D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Splits CSV Input.Step Type"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "63.808507801873446D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Splits CSV Input.Distance"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "98.87646524116917D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Splits CSV Input.Avg Pace"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "61.671732522796354D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Splits CSV Input.Avg HR)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "66.58965899101527D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Splits CSV Input.Max HR)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "88.67172892332601D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Splits CSV Input.Total Ascent)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "88.83587627922147D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Splits CSV Input.Total Descent)"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

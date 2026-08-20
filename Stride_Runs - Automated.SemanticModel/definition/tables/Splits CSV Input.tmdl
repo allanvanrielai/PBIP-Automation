@@ -1,0 +1,276 @@
+table 'Splits CSV Input'
+	lineageTag: 4a880bd4-9fd0-45e8-b405-f7579bf38512
+
+	column 'Run Date'
+		dataType: dateTime
+		formatString: yyyy/mm/dd
+		lineageTag: 3722e0bc-4e57-4ba6-b3a3-f27b403e6d4b
+		summarizeBy: none
+		sourceColumn: Run Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column Interval
+		dataType: int64
+		formatString: 0
+		lineageTag: aa795df3-1698-4181-8908-b33b5ddd87d6
+		summarizeBy: sum
+		sourceColumn: Interval
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Step Type'
+		dataType: string
+		lineageTag: 6789e765-1c8d-413b-95ab-5a3de131b8d1
+		summarizeBy: none
+		sourceColumn: Step Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Lap
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b348835-0aab-4aea-8191-166fd0d1d6ae
+		summarizeBy: none
+		sourceColumn: Lap
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = User
+
+	column Time
+		dataType: string
+		lineageTag: 26645142-67b8-4c0c-b0a5-746eb23b96e5
+		summarizeBy: none
+		sourceColumn: Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cumulative Time'
+		dataType: string
+		lineageTag: 5aa0a9d2-0725-4753-ae77-aa48f380c228
+		summarizeBy: none
+		sourceColumn: Cumulative Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column Distance
+		dataType: double
+		formatString: 0.00
+		lineageTag: a2bea5b4-cfb4-436f-8054-e45862d702f4
+		summarizeBy: sum
+		sourceColumn: Distance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg Pace'
+		dataType: dateTime
+		formatString: Short Time
+		lineageTag: 6209e8c0-2c9b-45df-8542-abfba7a1f4d2
+		summarizeBy: none
+		sourceColumn: Avg Pace
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column 'Avg HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f505add-70f5-4807-bd96-8aef0dbec9ee
+		summarizeBy: sum
+		sourceColumn: Avg HR
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 295fb67c-6173-45d1-908b-ab25ba5b8a4e
+		summarizeBy: sum
+		sourceColumn: Max HR
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Ascent'
+		dataType: int64
+		formatString: 0
+		lineageTag: 705dccdd-30bd-482e-9e37-136334f2636b
+		summarizeBy: sum
+		sourceColumn: Total Ascent
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Descent'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2276a4be-62cf-4167-9c2d-30f5c3e02361
+		summarizeBy: sum
+		sourceColumn: Total Descent
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg Run Cadence'
+		dataType: int64
+		formatString: 0
+		lineageTag: 46ad127d-4717-49ee-9e7b-154f723f36f3
+		summarizeBy: sum
+		sourceColumn: Avg Run Cadence
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg Ground Contact Time'
+		dataType: string
+		lineageTag: 617a4811-524e-425d-9cb5-780f189ce0bc
+		summarizeBy: none
+		sourceColumn: Avg Ground Contact Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg GCT Balance'
+		dataType: string
+		lineageTag: 8bae0a42-ede7-4f94-a27b-86274d9df6f8
+		summarizeBy: none
+		sourceColumn: Avg GCT Balance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg Stride Length'
+		dataType: string
+		lineageTag: 51570e33-2ad4-4e6b-a7e2-676a6ee90ea5
+		summarizeBy: none
+		sourceColumn: Avg Stride Length
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg Vertical Oscillation'
+		dataType: string
+		lineageTag: 8549937c-528e-448a-87f8-5f874479c639
+		summarizeBy: none
+		sourceColumn: Avg Vertical Oscillation
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg Vertical Ratio'
+		dataType: string
+		lineageTag: ee8a9102-ba69-4ea4-be5e-4d013fbd7a41
+		summarizeBy: none
+		sourceColumn: Avg Vertical Ratio
+
+		annotation SummarizationSetBy = Automatic
+
+	column Calories
+		dataType: int64
+		formatString: 0
+		lineageTag: f8ef4a0b-cf47-47b5-91aa-56a4b2dbd552
+		summarizeBy: sum
+		sourceColumn: Calories
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Best Pace'
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: e2622c90-9d33-4a92-98ac-7fc92d70b009
+		summarizeBy: none
+		sourceColumn: Best Pace
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column 'Max Run Cadence'
+		dataType: int64
+		formatString: 0
+		lineageTag: f0254dc9-4ff1-49d1-a1c1-3352c985153b
+		summarizeBy: sum
+		sourceColumn: Max Run Cadence
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Moving Time'
+		dataType: string
+		lineageTag: 5a674006-3d2c-4193-9c95-4913c90f945c
+		summarizeBy: none
+		sourceColumn: Moving Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg Moving Pace'
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 64173bca-4eb4-4746-a04a-55fae300ca07
+		summarizeBy: none
+		sourceColumn: Avg Moving Pace
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column 'Ave Pace Column' =
+			
+			VAR _Raw = FORMAT('Splits CSV Input'[Avg Pace], "HH:mm:ss")
+			VAR _Parts = SUBSTITUTE(_Raw, ":", "|")
+			VAR _Mins = PATHITEM(_Parts, 2)
+			VAR _Secs = PATHITEM(_Parts, 3)
+			RETURN
+			    FORMAT(VALUE(_Mins), "00") & ":" & FORMAT(VALUE(_Secs), "00")
+		lineageTag: e9425be7-4df5-4ebb-9992-1c636e37a009
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date Lap Key'
+		dataType: string
+		lineageTag: b1c8a5dd-aaa0-4abc-902c-0dbc31b91c9c
+		summarizeBy: none
+		sourceColumn: Date Lap Key
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Splits CSV Input' = m
+		mode: import
+		source =
+				let
+				    Source = Folder.Files("D:\OneDrive\Running\Run Data For Import\Splits CSV Input"),
+				    #"Filtered Hidden Files1" = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
+				    #"Invoke Custom Function1" = Table.AddColumn(#"Filtered Hidden Files1", "Transform File (2)", each #"Transform File (2)"([Content])),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Invoke Custom Function1", {"Name", "Source.Name"}),
+				    #"Removed Other Columns1" = Table.SelectColumns(#"Renamed Columns1", {"Source.Name", "Transform File (2)"}),
+				    #"Expanded Table Column1" = Table.ExpandTableColumn(#"Removed Other Columns1", "Transform File (2)", Table.ColumnNames(#"Transform File (2)"(#"Sample File (2)"))),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Expanded Table Column1",{{"Source.Name", type text}, {"", type any}, {"Interval", type text}, {"Step Type", type text}, {"Lap", type text}, {"Time", type text}, {"Cumulative Time", type text}, {"Distance", type text}, {"Avg Pace", type time}, {"Avg HR", Int64.Type}, {"Max HR", Int64.Type}, {"Total Ascent", Int64.Type}, {"Total Descent", Int64.Type}, {"Avg Run Cadence", Int64.Type}, {"Avg Ground Contact Time", type text}, {"Avg GCT Balance", type text}, {"Avg Stride Length", type text}, {"Avg Vertical Oscillation", type text}, {"Avg Vertical Ratio", type text}, {"Calories", Int64.Type}, {"Best Pace", type time}, {"Max Run Cadence", Int64.Type}, {"Moving Time", type text}, {"Avg Moving Pace", type time}}),
+				    #"Split Column by Delimiter" = Table.SplitColumn(#"Changed Type", "Source.Name", Splitter.SplitTextByEachDelimiter({"_"}, QuoteStyle.Csv, false), {"Source.Name.1", "Source.Name.2"}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"Source.Name.1", type date}, {"Source.Name.2", type text}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type1","",null,Replacer.ReplaceValue,{"Interval"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value",null,"0",Replacer.ReplaceValue,{"Interval"}),
+				    #"Filtered Rows2" = Table.SelectRows(#"Replaced Value1", each ([Interval] <> "Summary")),
+				    #"Renamed Columns" = Table.RenameColumns(#"Filtered Rows2",{{"Source.Name.1", "Run Date"}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Renamed Columns", each ([Interval] <> "Summary")),
+				    #"Removed Columns" = Table.RemoveColumns(#"Filtered Rows",{"Source.Name.2", ""}),
+				    #"Changed Type with Locale" = Table.TransformColumnTypes(#"Removed Columns", {{"Run Date", type date}}, "en-ZA"),
+				    #"Filtered Rows1" = Table.SelectRows(#"Changed Type with Locale", each true),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Filtered Rows1",{{"Run Date", type date}}),
+				    #"Replaced Errors" = Table.ReplaceErrorValues(#"Changed Type2", {{"Avg Pace", #time(0, 2, 25)}}),
+				    #"Replaced Errors1" = Table.ReplaceErrorValues(#"Replaced Errors", {{"Avg HR", 0}}),
+				    #"Replaced Errors2" = Table.ReplaceErrorValues(#"Replaced Errors1", {{"Max HR", 0}}),
+				    #"Replaced Errors3" = Table.ReplaceErrorValues(#"Replaced Errors2", {{"Avg Run Cadence", 0}}),
+				    #"Replaced Errors4" = Table.ReplaceErrorValues(#"Replaced Errors3", {{"Best Pace", #time(0, 2, 25)}}),
+				    #"Replaced Errors5" = Table.ReplaceErrorValues(#"Replaced Errors4", {{"Max Run Cadence", 0}}),
+				    #"Replaced Errors6" = Table.ReplaceErrorValues(#"Replaced Errors5", {{"Avg Moving Pace", #time(0, 2, 25)}}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Errors6",".",",",Replacer.ReplaceText,{"Distance"}),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Replaced Value2",{{"Distance", type number}}),
+				    #"Added Custom" = Table.AddColumn(#"Changed Type3", "Date Lap Key", each DateTime.ToText(DateTime.From([Run Date]), "yyyy-MM-dd") & "_" & [Lap]),
+				    #"Replaced Errors7" = Table.ReplaceErrorValues(#"Added Custom", {{"Calories", 0}})
+				in
+				    #"Replaced Errors7"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

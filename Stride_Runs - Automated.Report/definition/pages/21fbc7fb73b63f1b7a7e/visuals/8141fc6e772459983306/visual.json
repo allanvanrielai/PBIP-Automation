@@ -1,0 +1,92 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "8141fc6e772459983306",
+  "position": {
+    "x": 21.405506504937151,
+    "y": 0,
+    "z": 0,
+    "height": 637.65877272602256,
+    "width": 315.44956954644226,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MissingDateReport"
+                    }
+                  },
+                  "Property": "Unique Run Date"
+                }
+              },
+              "queryRef": "MissingDateReport.Unique Run Date",
+              "nativeQueryRef": "Unique Run Date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MissingDateReport"
+                    }
+                  },
+                  "Property": "Source Message"
+                }
+              },
+              "queryRef": "MissingDateReport.Source Message",
+              "nativeQueryRef": "Source Message"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "MissingDateReport"
+                  }
+                },
+                "Property": "Unique Run Date"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "521.182291336874D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MissingDateReport.Source Message"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

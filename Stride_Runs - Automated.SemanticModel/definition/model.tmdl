@@ -1,0 +1,48 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-ZA
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup 'Transform File from TCX Data'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Transform File from TCX Data\Helper Queries'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Transform File from Splits CSV Input'
+
+	annotation PBI_QueryGroupOrder = 2
+
+queryGroup 'Transform File from Splits CSV Input\Helper Queries'
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation PBI_QueryOrder = ["TCX Data","Parameter1","Transform Sample File","Sample File","Transform File","Splits CSV Input","Sample File (2)","Parameter2","Transform Sample File (2)","Transform File (2)","Splits - Daily","Stride Runs"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Dates
+ref table DateTableTemplate_39cdd5de-4724-4de5-a621-a8eb8f8fc6c5
+ref table 'TCX Data'
+ref table LocalDateTable_19ea987e-57ec-4e4f-8556-8ec043c0a19c
+ref table LocalDateTable_d3632625-55b9-4c11-9742-2783d05c72d0
+ref table LastArrivalTable
+ref table LocalDateTable_c6b96aaf-1523-400a-a650-2ef4f0ddee1c
+ref table LocalDateTable_f90f6663-7944-40b4-9b4d-4a78a74d71d4
+ref table 'Splits CSV Input'
+ref table MissingDateReport
+ref table LocalDateTable_38a07176-93da-4b77-bd7b-9cb1185834c0
+ref table 'Splits - Daily'
+ref table LocalDateTable_faf83ed2-4610-4658-8034-31fd90bbe4e5
+ref table 'Stride Runs'
+ref table 'My Measures'
+
+ref cultureInfo en-US
+

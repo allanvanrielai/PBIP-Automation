@@ -1,0 +1,89 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "80df47b5448dc2e35ada",
+  "position": {
+    "x": 391.9756838905775,
+    "y": 336.53495440729483,
+    "z": 11000,
+    "height": 255.80547112462008,
+    "width": 836.47416413373867,
+    "tabOrder": 11000
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "TCX Data"
+                    }
+                  },
+                  "Property": "Run Date"
+                }
+              },
+              "queryRef": "TCX Data.Run Date",
+              "nativeQueryRef": "Run Date",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "My Measures"
+                    }
+                  },
+                  "Property": "Lap Average HR"
+                }
+              },
+              "queryRef": "My Measures.Lap Average HR",
+              "nativeQueryRef": "Lap Average HR"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "My Measures"
+                    }
+                  },
+                  "Property": "Lap Max HR (Calc)"
+                }
+              },
+              "queryRef": "My Measures.Lap Max HR (Calc)",
+              "nativeQueryRef": "Lap Max HR (Calc)"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "TCX Data"
+                  }
+                },
+                "Property": "Run Date"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

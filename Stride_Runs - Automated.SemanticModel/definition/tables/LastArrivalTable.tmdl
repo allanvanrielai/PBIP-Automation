@@ -1,0 +1,73 @@
+table LastArrivalTable
+	lineageTag: 169ed2ac-3b1f-4538-bdb8-c2b7042f37e8
+
+	column 'Run Date'
+		formatString: General Date
+		lineageTag: 16d77550-6547-42a0-8a75-05bd10f0be3a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: TCX Data[Run Date]
+
+		variation Variation
+			isDefault
+			relationship: e0bba21b-a2e7-4e1b-bb65-cdf7fb38c7e7
+			defaultHierarchy: LocalDateTable_c6b96aaf-1523-400a-a650-2ef4f0ddee1c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lap Number'
+		formatString: 0
+		lineageTag: a788a4a6-f1d1-45eb-ad06-93f21981e394
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: TCX Data[Lap Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TP HR'
+		formatString: 0
+		lineageTag: 854b086f-30a0-47b2-8020-1c3788ddb7ca
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: TCX Data[TP HR]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FirstLast Calc'
+		lineageTag: 3c0f316c-725c-411d-8664-1d7924ab5070
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: TCX Data[FirstLast Calc]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TP Time'
+		formatString: General Date
+		lineageTag: 6491e155-2d93-428c-9682-1e60a5de94fd
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: TCX Data[TP Time]
+
+		variation Variation
+			isDefault
+			relationship: 33d7ec34-8707-4401-8d1d-0e96fb62b0b4
+			defaultHierarchy: LocalDateTable_f90f6663-7944-40b4-9b4d-4a78a74d71d4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition LastArrivalTable = calculated
+		mode: import
+		source =
+				SUMMARIZE(
+				                        FILTER( 'TCX Data',
+				                                'TCX Data'[FirstLast Calc]
+				                                = CALCULATE (MAX ( 'TCX Data'[FirstLast Calc] ),
+				                                   ALLEXCEPT ( 'TCX Data', 'TCX Data'[TP Time] ))),
+				                    'TCX Data'[Run Date],
+				                    'TCX Data'[FirstLast Calc],
+				                    'TCX Data'[Lap Number],
+				                    'TCX Data'[TP Time],
+				                    'TCX Data'[TP HR] )
+
+	annotation PBI_Id = 056cdfad6fad4154ac55fdcd936f5462
+

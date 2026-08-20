@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Stride_Runs - Automated"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3b2bf11e-8bfe-4268-b668-94fb398c02bc"
+  }
+}

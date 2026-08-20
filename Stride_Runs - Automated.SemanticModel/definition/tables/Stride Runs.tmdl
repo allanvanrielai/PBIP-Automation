@@ -1,0 +1,409 @@
+table 'Stride Runs'
+	lineageTag: ddeb975f-1eb8-4541-a387-c5c6a10a333f
+
+	column Date
+		dataType: dateTime
+		formatString: yyyy/mm/dd
+		lineageTag: 86f804c6-2770-497f-b00d-58aeff72745b
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Time
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 3b783121-e6d2-4e76-96b0-fc4e9be44774
+		summarizeBy: none
+		sourceColumn: Time
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column Alarm
+		dataType: int64
+		formatString: 0
+		lineageTag: be238073-404b-4fcb-99b6-2ae7bdd7f23d
+		summarizeBy: none
+		sourceColumn: Alarm
+
+		annotation SummarizationSetBy = User
+
+	column 'Run Type'
+		dataType: string
+		lineageTag: f2257ddc-9091-4103-aa0d-12f78696784b
+		summarizeBy: none
+		sourceColumn: Run Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Details
+		dataType: string
+		lineageTag: aecf50e4-102c-47df-a305-78c2cff0a649
+		summarizeBy: none
+		sourceColumn: Details
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Distance'
+		dataType: double
+		lineageTag: be019eaa-ae8c-497b-8792-cbfe6dcd88e1
+		summarizeBy: sum
+		sourceColumn: Total Distance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Run Distance'
+		dataType: double
+		lineageTag: 88a6d2d8-0630-4aa8-b7f4-54083e680267
+		summarizeBy: sum
+		sourceColumn: Run Distance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Ave Pace'
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 82c45c0f-23d2-4b3c-9d81-8a0d41cf4a86
+		summarizeBy: none
+		sourceColumn: Ave Pace
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column 'Run Ave Pace'
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 84f22a69-59ee-427f-88d6-83178f0ae827
+		summarizeBy: none
+		sourceColumn: Run Ave Pace
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column 'Ave HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 766528b1-107e-44b2-99df-de045f3c0969
+		summarizeBy: sum
+		sourceColumn: Ave HR
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Max HR'
+		dataType: int64
+		formatString: 0
+		lineageTag: a3cdcc16-7fd6-49bb-9006-85d3edd0c0cc
+		summarizeBy: sum
+		sourceColumn: Max HR
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'AM pump'
+		dataType: string
+		lineageTag: 045c8b9e-0688-40e6-be83-f66c59169bdd
+		summarizeBy: none
+		sourceColumn: AM pump
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tablet?
+		dataType: string
+		lineageTag: d206bf41-5550-46ac-83c1-67a863ab78e4
+		summarizeBy: none
+		sourceColumn: Tablet?
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pre pump?'
+		dataType: string
+		lineageTag: 3869ac1e-d725-4ee1-81f3-01c81eab78b1
+		summarizeBy: none
+		sourceColumn: Pre pump?
+
+		annotation SummarizationSetBy = Automatic
+
+	column Coralan
+		dataType: string
+		lineageTag: b16d1700-d58b-43de-bed6-ce9bce94a3c1
+		summarizeBy: none
+		sourceColumn: Coralan
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'HR - Start of Walk'
+		dataType: int64
+		formatString: 0
+		lineageTag: 68830e00-867d-4c5f-916a-f95bd32e4630
+		summarizeBy: sum
+		sourceColumn: HR - Start of Walk
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'HR - Start of Run'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9563c858-02f4-4f74-9047-e3838f319574
+		summarizeBy: sum
+		sourceColumn: HR - Start of Run
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'HR - 5min After Run'
+		dataType: int64
+		formatString: 0
+		lineageTag: e4fd1bcf-0c05-4110-80fa-dceffef2d280
+		summarizeBy: sum
+		sourceColumn: HR - 5min After Run
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Exhaustion (0 - 10)'
+		dataType: double
+		lineageTag: ea1da249-5012-476c-8c5c-0c8b1605b3fa
+		summarizeBy: sum
+		sourceColumn: Exhaustion (0 - 10)
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Others Say?'
+		dataType: double
+		formatString: 0.0
+		lineageTag: ae6c2a3e-e723-493b-b6c2-45798edd4565
+		summarizeBy: none
+		sourceColumn: Others Say?
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = User
+
+	column Shoe
+		dataType: string
+		lineageTag: 80b51465-21da-4e6e-bfde-41f56d26c032
+		summarizeBy: none
+		sourceColumn: Shoe
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Red: Max 90-100% -  153-170'
+		dataType: string
+		lineageTag: 5910ba2b-afbf-4a28-bafd-b2be50a8994a
+		summarizeBy: none
+		sourceColumn: Red: Max 90-100% -  153-170
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orange: Thresh 80-90% -  136-153'
+		dataType: string
+		lineageTag: 26b520f4-10b7-4b02-98f3-4eb82b3eec36
+		summarizeBy: none
+		sourceColumn: Orange: Thresh 80-90% -  136-153
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Green: Aero 70-80% - 119-136'
+		dataType: string
+		lineageTag: 5056bf81-ad6e-4534-8708-4784c272dd2e
+		summarizeBy: none
+		sourceColumn: Green: Aero 70-80% - 119-136
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Blue: Easy 60-70% - 102-119'
+		dataType: string
+		lineageTag: ee8e4d58-7262-4db9-ba20-2721da754f00
+		summarizeBy: none
+		sourceColumn: Blue: Easy 60-70% - 102-119
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gray: Warmup 50-60% - 85-102'
+		dataType: string
+		lineageTag: 5834b78f-3d07-4845-96da-54fc96437a00
+		summarizeBy: none
+		sourceColumn: Gray: Warmup 50-60% - 85-102
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comments
+		dataType: string
+		lineageTag: 559d421d-0e90-4511-989f-6f7dde7d6aba
+		summarizeBy: none
+		sourceColumn: Comments
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Running Ave HR' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        SUM('Splits CSV Input'[Avg HR]),
+			        'Splits CSV Input'[Step Type] = "Run"
+			    ),
+			    CALCULATE(
+			        COUNT('Splits CSV Input'[Avg HR]),
+			        'Splits CSV Input'[Step Type] = "Run"
+			    )
+			)
+		lineageTag: 527d7b5c-00d6-4be7-8386-071a29838ccf
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FONTCOLOUR = ```
+			
+			SWITCH(
+			    TRUE(),
+			    'Stride Runs'[Alarm] = 3 || 'Stride Runs'[Exhaustion (0 - 10)] > 8.5 || 'Stride Runs'[Others Say?] > 8.5, "RED", 
+			    'Stride Runs'[Alarm] = 2 || 'Stride Runs'[Exhaustion (0 - 10)] > 6 || 'Stride Runs'[Others Say?] > 6, "ORANGE",  
+			    'Stride Runs'[Alarm] = 1 || 'Stride Runs'[Exhaustion (0 - 10)] > 4 || 'Stride Runs'[Others Say?] > 4, "BLUE", 
+			    "BLACK"  -- Default (Black)
+			)
+			```
+		lineageTag: 1ad0e8d5-1240-47b7-8380-3a2e13c67027
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column RedTimeInSeconds = ```
+			
+			
+			    VAR vHrSecs =  CONVERT(Left('Stride Runs'[Red: Max 90-100% -  153-170],2),INTEGER) * 3600
+			    VAR vMinSecs = CONVERT(MID('Stride Runs'[Red: Max 90-100% -  153-170],4,2),INTEGER) * 60
+			    VAR vSecSecs =  CONVERT(Right('Stride Runs'[Red: Max 90-100% -  153-170],2),INTEGER) * 1
+			    VAR tot = vHrSecs + vMinSecs + vSecSecs
+			
+			RETURN tot
+			```
+		formatString: 0
+		lineageTag: ebf12572-99e2-4939-9df4-be98a42b0458
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrangeTimeInSeconds = ```
+			
+			
+			    VAR vHrSecs =  CONVERT(Left('Stride Runs'[Orange: Thresh 80-90% -  136-153],2),INTEGER) * 3600
+			    VAR vMinSecs = CONVERT(MID('Stride Runs'[Orange: Thresh 80-90% -  136-153],4,2),INTEGER) * 60
+			    VAR vSecSecs =  CONVERT(Right('Stride Runs'[Orange: Thresh 80-90% -  136-153],2),INTEGER) * 1
+			    VAR tot = vHrSecs + vMinSecs + vSecSecs
+			
+			RETURN tot
+			```
+		formatString: 0
+		lineageTag: e9426da6-3074-4bf3-83f1-52246edb2455
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column GreenTimeInSeconds = ```
+			
+			
+			    VAR vHrSecs =  CONVERT(Left('Stride Runs'[Green: Aero 70-80% - 119-136],2),INTEGER) * 3600
+			    VAR vMinSecs = CONVERT(MID('Stride Runs'[Green: Aero 70-80% - 119-136],4,2),INTEGER) * 60
+			    VAR vSecSecs =  CONVERT(Right('Stride Runs'[Green: Aero 70-80% - 119-136],2),INTEGER) * 1
+			    VAR tot = vHrSecs + vMinSecs + vSecSecs
+			
+			RETURN tot
+			```
+		formatString: 0
+		lineageTag: f2050f68-b098-405b-b521-5a13205c8440
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column BlueTimeInSeconds = ```
+			
+			
+			    VAR vHrSecs =  CONVERT(Left('Stride Runs'[Blue: Easy 60-70% - 102-119],2),INTEGER) * 3600
+			    VAR vMinSecs = CONVERT(MID('Stride Runs'[Blue: Easy 60-70% - 102-119],4,2),INTEGER) * 60
+			    VAR vSecSecs =  CONVERT(Right('Stride Runs'[Blue: Easy 60-70% - 102-119],2),INTEGER) * 1
+			    VAR tot = vHrSecs + vMinSecs + vSecSecs
+			
+			RETURN tot
+			```
+		formatString: 0
+		lineageTag: 1c32e0f9-db8c-41fe-a2cb-6c9c2d235848
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column GrayTimeInSeconds = ```
+			
+			
+			    VAR vHrSecs =  CONVERT(Left('Stride Runs'[Gray: Warmup 50-60% - 85-102],2),INTEGER) * 3600
+			    VAR vMinSecs = CONVERT(MID('Stride Runs'[Gray: Warmup 50-60% - 85-102],4,2),INTEGER) * 60
+			    VAR vSecSecs =  CONVERT(Right('Stride Runs'[Gray: Warmup 50-60% - 85-102],2),INTEGER) * 1
+			    VAR tot = vHrSecs + vMinSecs + vSecSecs
+			
+			RETURN tot
+			```
+		formatString: 0
+		lineageTag: 225109a0-f7bb-4c13-9110-c873d23966e4
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column RundDateTime = CONCATENATE(FORMAT('Stride Runs'[Date], "dddd") & ", " & FORMAT('Stride Runs'[Coralan],"yyyy/mm/dd") & " @ " & 'Stride Runs'[Time] & " - ",'Stride Runs'[Details])
+		lineageTag: 025fd9d8-ebd7-4ef2-99d8-8f526b670c5f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Run Ave Pace Total Secs' = ```
+			
+			    
+			HOUR('Stride Runs'[Run Ave Pace]) * 60
+			    + MINUTE('Stride Runs'[Run Ave Pace])
+			
+			```
+		formatString: 0
+		lineageTag: 75604516-98d0-4ece-bb4e-c88fdf365b44
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Breathing
+		dataType: string
+		lineageTag: 35a80b58-cbbb-45a6-a283-7ab2a32e4792
+		summarizeBy: none
+		sourceColumn: Breathing
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Stride Runs' = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("D:\OneDrive\Running\Stride_Runs.xlsx"), null, true),
+				    #"Stride Runs_Sheet" = Source{[Item="Stride Runs",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Stride Runs_Sheet", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Date", type date}, {"Time", type time}, {"Alarm", Int64.Type}, {"Run Type", type any}, {"Details", type text}, {"Total Distance", type number}, {"Run Distance", type number}, {"Ave Pace", type time}, {"Run Ave Pace", type time}, {"Ave HR", Int64.Type}, {"Max HR", Int64.Type}, {"AM pump?", type any}, {"Tablet?", type text}, {"Pre pump?", type text}, {"Coralan", type text}, {"HR - Start of Walk", Int64.Type}, {"HR - Start of Run", Int64.Type}, {"HR - 5min After Run", Int64.Type}, {"Exhaustion (0 - 10)", type any}, {"Others Say?", Int64.Type}, {"Shoe", type text}, {"Red: Max 90-100% -  153-170", type text}, {"Orange: Thresh 80-90% -  136-153", type text}, {"Green: Aero 70-80% - 119-136", type text}, {"Blue: Easy 60-70% - 102-119", type text}, {"Gray: Warmup 50-60% - 85-102", type text}, {"Comments", type text}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"AM pump?", "AM pump"}}),
+				    #"Replaced Errors" = Table.ReplaceErrorValues(#"Renamed Columns", {{"Red: Max 90-100% -  153-170", "0"}}),
+				    #"Replaced Errors1" = Table.ReplaceErrorValues(#"Replaced Errors", {{"Orange: Thresh 80-90% -  136-153", "0"}})
+				in
+				    #"Replaced Errors1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+
